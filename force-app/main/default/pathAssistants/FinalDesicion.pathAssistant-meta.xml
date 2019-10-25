@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>FinalDecision__c</entityName>
+    <fieldName>Status__c</fieldName>
+    <masterLabel>決裁</masterLabel>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;SFDC社に購入予定枚数分の見積書（兼発注書）を依頼。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;※SFDC社への依頼実施はC&amp;amp;S岡田さんに依頼。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;5営業日以内には来る想定&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>SFDC社見積書兼発注書の取得</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;発注の許可をいただいたら&lt;/span&gt;&lt;a href=&quot;&quot; target=&quot;_blank&quot; style=&quot;font-size: 14px;&quot;&gt;バウチャー申し込みサイト&lt;/a&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;よりバウチャーを発注。 ※PB名義で発注を実施 発注後、サイトに登録したPBのメールアドレスにバウチャー一覧（メール直書き）と 請求書が送付されるので、メールを連携してもらう。 ※値引きがある場合、見積書にプロモーションコードが記載されているので忘れず記載すること。（定価になってしまうので）&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>バウチャーの購入</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;・バウチャー番号を各受験者に払い出す&lt;/p&gt;&lt;p&gt;　・期限に注意&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;※部所発注確認書、決裁申請書等の記載内容については、&lt;/p&gt;&lt;p&gt;　2019年度上期の資料を参考にしてください。&lt;/p&gt;&lt;p&gt;　&amp;lt;\\FUJI-SRV-T04\kin-org\Kinyusv_01\金融ソリューションビジネスユニット\【SL（金融）】\00_共通\031_教育\90_管理\2019試験費用関連\申請資料&amp;gt;&lt;/p&gt;&lt;p&gt;　&lt;/p&gt;&lt;p&gt;　・部所発注確認書：C163_部所発注確認書_C163-2019-16000221.xlsm&lt;/p&gt;&lt;p&gt;　・決裁申請書：C126_決裁申請書_20190101_承認後.xlsm&lt;/p&gt;&lt;p&gt;　・受験候補者一覧：Salesforce認定資格受験候補者一覧_2019上期.xlsx&lt;/p&gt;&lt;p&gt;　・決裁補足説明：決裁補足説明.pdf&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</info>
+        <picklistValueName>バウチャー番号管理</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;決裁申請承認後、PBにバウチャー発注の許可をもらう。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; ※基本、川口さんから実施。&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>バウチャー発注の許可確認</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;お疲れさまでした！&lt;/p&gt;</info>
+        <picklistValueName>完了</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;WFEXで本部長決裁を申請。「02_決裁申請」-「（起案番号)_決裁_（種別）_（件名）」テンプレートを使用。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; ・決裁者：HB&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; ・添付資料： ①SFDC社見積書兼発注書 →上記1.で取得した資料  ②部所発注確認書 →上記2.で申請、承認されたファイル  ③資格受験候補者一覧 →今回の申請の想定受験候補者一覧 ④決裁補足説明 → 資格取得することによる効果を説明した資料（川口さん作成要） ※ファイル名も変更可 ※申請から承認まで1ヶ月は見込んだ方がよい。&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>本部長決裁の申請</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;中込さん（今井さん）に依頼して、本部長決裁申請の起案Noの払い出しを依頼。&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>本部長決裁申請の起案Noの取得</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;PB宛て請求書が届いたら、中込さん（今井さん）に依頼し処理してもらう&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>請求書処理</picklistValueName>
+    </pathAssistantSteps>
+    <pathAssistantSteps>
+        <info>&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;WFEXで部所発注確認書を申請。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;「05_業務系帳票」-「部所発注確認書_件名」テンプレートを使用。&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; 添付資料：&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt; ①SFDC社見積書兼発注書&lt;/span&gt;&lt;/p&gt;</info>
+        <picklistValueName>部所発注確認書の申請</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>__MASTER__</recordTypeName>
+</PathAssistant>

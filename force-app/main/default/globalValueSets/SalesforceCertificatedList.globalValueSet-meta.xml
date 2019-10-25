@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>アドミニストレーター</fullName>
+        <default>false</default>
+        <label>アドミニストレーター</label>
+    </customValue>
+    <customValue>
+        <fullName>上級アドミニストレーター</fullName>
+        <default>false</default>
+        <label>上級アドミニストレーター</label>
+    </customValue>
+    <customValue>
+        <fullName>Sales Cloud コンサルタント</fullName>
+        <default>false</default>
+        <label>Sales Cloud コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>Service Cloud コンサルタント</fullName>
+        <default>false</default>
+        <label>Service Cloud コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>Field Service Lightning コンサルタント</fullName>
+        <default>false</default>
+        <label>Field Service Lightning コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>Community Cloud コンサルタント</fullName>
+        <default>false</default>
+        <label>Community Cloud コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>Platform アプリケーションビルダー</fullName>
+        <default>false</default>
+        <label>Platform アプリケーションビルダー</label>
+    </customValue>
+    <customValue>
+        <fullName>Platform デベロッパー</fullName>
+        <default>false</default>
+        <label>Platform デベロッパー</label>
+    </customValue>
+    <customValue>
+        <fullName>上級 Platform デベロッパー（1次）</fullName>
+        <default>false</default>
+        <label>上級 Platform デベロッパー（1次）</label>
+    </customValue>
+    <customValue>
+        <fullName>Einstein Analytics and Discovery コンサルタント</fullName>
+        <default>false</default>
+        <label>Einstein Analytics and Discovery コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>B2C Commerce デベロッパー</fullName>
+        <default>false</default>
+        <label>B2C Commerce デベロッパー</label>
+    </customValue>
+    <customValue>
+        <fullName>Pardot スペシャリスト</fullName>
+        <default>false</default>
+        <label>Pardot スペシャリスト</label>
+    </customValue>
+    <customValue>
+        <fullName>Pardot コンサルタント</fullName>
+        <default>false</default>
+        <label>Pardot コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Cloud メールスペシャリスト</fullName>
+        <default>false</default>
+        <label>Marketing Cloud メールスペシャリスト</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing Cloud コンサルタント</fullName>
+        <default>false</default>
+        <label>Marketing Cloud コンサルタント</label>
+    </customValue>
+    <customValue>
+        <fullName>CPQ スペシャリスト</fullName>
+        <default>false</default>
+        <label>CPQ スペシャリスト</label>
+    </customValue>
+    <customValue>
+        <fullName>テクニカルアーキテクト</fullName>
+        <default>false</default>
+        <label>テクニカルアーキテクト</label>
+    </customValue>
+    <customValue>
+        <fullName>システムアーキテクト</fullName>
+        <default>false</default>
+        <label>システムアーキテクト</label>
+    </customValue>
+    <customValue>
+        <fullName>アプリケーションアーキテクト</fullName>
+        <default>false</default>
+        <label>アプリケーションアーキテクト</label>
+    </customValue>
+    <customValue>
+        <fullName>Data Architecture and Management デザイナー</fullName>
+        <default>false</default>
+        <label>Data Architecture and Management デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>Sharing and Visibility デザイナー</fullName>
+        <default>false</default>
+        <label>Sharing and Visibility デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>Development Lifecycle and Deployment デザイナー</fullName>
+        <default>false</default>
+        <label>Development Lifecycle and Deployment デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>Identity and Access Management デザイナー</fullName>
+        <default>false</default>
+        <label>Identity and Access Management デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>Integration Architecture デザイナー</fullName>
+        <default>false</default>
+        <label>Integration Architecture デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>Heroku Architecture デザイナー</fullName>
+        <default>false</default>
+        <label>Heroku Architecture デザイナー</label>
+    </customValue>
+    <customValue>
+        <fullName>B2C Commerce Technical Solution デザイナー</fullName>
+        <default>false</default>
+        <label>B2C Commerce Technical Solution デザイナー</label>
+    </customValue>
+    <masterLabel>Salesforce認定資格</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

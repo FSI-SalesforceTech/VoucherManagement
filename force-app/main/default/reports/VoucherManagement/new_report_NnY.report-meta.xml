@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ExaminationInfo__c.Exam__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>ExaminationInfo__c.PassOrFail__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>合格</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_$Voucher__c.AssignUser__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ユーザ毎の保有資格</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$ExaminationInfo__c@ExaminationInfo__c.Voucher__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ExaminationInfo__c.WillExam__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

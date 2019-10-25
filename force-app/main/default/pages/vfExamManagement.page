@@ -1,0 +1,14 @@
+<apex:page>
+    <apex:includeLightning />
+    <div id="lightning" />
+	<script>
+		$Lightning.use("c:examManagementApp", function() {
+        	 $Lightning.createComponent("c:examinationInput", {}, "lightning",
+              function(cmp) {
+                console.log("LWC component was created");
+                // do some stuff
+              }
+          );
+        });
+    </script>
+</apex:page>
