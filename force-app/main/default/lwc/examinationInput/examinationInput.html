@@ -63,32 +63,57 @@
             </lightning-datatable>
         </template>
         <template if:true={editmode}>
-                <div class="demo-only">
-                    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
-                        <div class="slds-modal__container">
-                            <header class="slds-modal__header">
-                                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
-                                    <lightning-icon icon-name="utility:close" size="medium">
-                                    </lightning-icon>
-                                    <span class="slds-assistive-text">Close</span>
-                                </button>
-                                <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"><lightning-icon icon-name="utility:event"></lightning-icon>&nbsp;&nbsp;&nbsp;受験予定・実績を入力</h2>
-                            </header>
-                             
-                            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
-                                <lightning-record-edit-form record-id={examid} object-api-name="ExaminationInfo__c" mode="edit" onsuccess={handleSuccess} onerror={handleError}>
-                                    <lightning-input-field field-name="Exam__c"></lightning-input-field>
-                                    <lightning-input-field field-name="WillExam__c"></lightning-input-field>
-                                    <lightning-input-field field-name="PassOrFail__c"></lightning-input-field>
-                                    <hr>&nbsp;&nbsp;&nbsp;
-                                    <lightning-button label="キャンセル" variant="neutral" onclick={closeModal} icon-name="utility:close"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <lightning-button label="保存" variant="brand" type="submit" icon-name="utility:check"></lightning-button>
-                                </lightning-record-edit-form>
-                            </div>
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate"><lightning-icon icon-name="utility:event"></lightning-icon>&nbsp;&nbsp;&nbsp;受験予定・実績を入力</h2>
+                        </header>
+                            
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            <lightning-record-edit-form record-id={examid} object-api-name="ExaminationInfo__c" mode="edit" onsuccess={handleSuccess} onerror={handleError}>
+                                <lightning-input-field field-name="Exam__c"></lightning-input-field>
+                                <lightning-input-field field-name="WillExam__c"></lightning-input-field>
+                                <lightning-input-field field-name="PassOrFail__c"></lightning-input-field>
+                                <hr>&nbsp;&nbsp;&nbsp;
+                                <lightning-button label="キャンセル" variant="neutral" onclick={closeModal} icon-name="utility:close"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;
+                                <lightning-button label="保存" variant="brand" type="submit" icon-name="utility:check"></lightning-button>
+                            </lightning-record-edit-form>
                         </div>
-                    </section>
-                    <div class="slds-backdrop slds-backdrop_open"></div>
-                </div>
-            </template>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
+        <template if:true={returnmode}>
+            <div class="demo-only">
+                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <header class="slds-modal__header">
+                            <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close" onclick={closeModal}>
+                                <lightning-icon icon-name="utility:close" size="medium">
+                                </lightning-icon>
+                                <span class="slds-assistive-text">Close</span>
+                            </button>
+                            <h2 id="modal-heading-02" class="slds-text-heading_medium slds-hyphenate"><lightning-icon icon-name="utility:question"></lightning-icon>&nbsp;&nbsp;&nbsp;本当にバウチャーを返却しますか？</h2>
+                        </header>
+                            
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+                            <center>
+                                <lightning-button label="はい" variant="brand" onclick={voucherReset} icon-name="utility:check"></lightning-button>
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <lightning-button label="いいえ" variant="neutral" onclick={closeReturnModal} icon-name="utility:close"></lightning-button>
+                            </center>
+                        </div>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </template>
     </div>
 </template>
