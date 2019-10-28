@@ -2,8 +2,15 @@ import { LightningElement, track, wire } from 'lwc';
 import getVoucherList from '@salesforce/apex/ExaminationInputController.getVoucherList';
 import { refreshApex } from '@salesforce/apex';
 
+import { updateRecord } from 'lightning/uiRecordApi';
+import { deleteRecord } from 'lightning/uiRecordApi';
+import VOUID_FIELD from '@salesforce/schema/Voucher__c.Id';
+import ASSIGNUSER_FIELD from '@salesforce/schema/Voucher__c.AssignUser__c';
+import ASSIGNDATE_FIELD from '@salesforce/schema/Voucher__c.AssignDate__c';
+
 const actions = [
-    { label: '編集', name: 'edit', iconName : 'utility:edit' }
+    { label: '編集', name: 'edit', iconName : 'utility:edit' },
+    { label: 'バウチャーを返却', name: 'return', iconName : 'utility:resource_absence' }
 ];
 
 const columns = [
@@ -24,11 +31,13 @@ export default class ExaminationInput extends LightningElement {
     @track columns = columns;
     @track rowOffset = 0;
     @track editmode = false;
+    @track returnmode = false;
     @track examid;
     @track isSuccess = false;
     @track isError = false;
     @track errordetail;
     wiredVoucherResult;
+    voucherid;
 
     @wire(getVoucherList) wireGetVoucherList(result) {
         this.wiredVoucherResult = result;
@@ -37,8 +46,19 @@ export default class ExaminationInput extends LightningElement {
     
     handleRowAction(e){
         const row = e.detail.row;
+        const actionName = e.detail.action.name;
         this.examid = row.Id;
-        this.editmode = true;
+        switch (actionName) {
+            case 'edit':
+                this.editmode = true;
+                break;
+            case 'return':
+                this.voucherid = row.Voucher__c;
+                this.returnmode = true;
+                break;
+            default:
+                break;
+        }
     }
 
     handleSuccess(e){
@@ -67,5 +87,43 @@ export default class ExaminationInput extends LightningElement {
 
     closeErrorToast() {
         this.isError = false;
+    }
+
+    closeReturnModal(){
+        this.returnmode = false;
+    }
+
+    voucherReset(){
+        // 受験情報を削除
+        deleteRecord(this.examid)
+            .then(() => {
+            })
+            .catch(error => {
+                this.returnmode = false;
+                this.isError = true;
+                this.isSuccess = false;
+                this.errordetail = error.body.message;
+                return;
+            });
+
+        const fields = {};
+        fields[VOUID_FIELD.fieldApiName] = this.voucherid;
+        fields[ASSIGNUSER_FIELD.fieldApiName] = '';
+        fields[ASSIGNDATE_FIELD.fieldApiName] = '';
+        const recordInput  = { fields };
+        
+        updateRecord(recordInput)
+            .then( () => {
+                this.returnmode = false;
+                this.isSuccess = true;
+                this.isError = false;
+                return refreshApex(this.wiredVoucherResult);
+            })
+            .catch(error => {
+                this.returnmode = false;
+                this.isError = true;
+                this.isSuccess = false;
+                this.errordetail = error.body.message;
+            });
     }
 }
