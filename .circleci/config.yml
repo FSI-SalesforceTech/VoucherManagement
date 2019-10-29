@@ -36,18 +36,20 @@ jobs:
           command: |
             echo 'Running tests'
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a bunai-crm
+            sfdx force:auth:jwt:grant --clientid $SANDBOX_CONSUMER_KEY --jwtkeyfile assets/server.key --username $SANDBOX_SFDC_USER -a sandbox --instanceurl https://test.salesforce.com
             sfdx force --help
             sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 3
             sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM
+            sfdx force:user:permset:assign -n VoucherManagement -u circle_build_$CIRCLE_BUILD_NUM
 
-      ###- run:
-      ###    name: Create Package
-      ###    command: |
-      ###      if [ "${CIRCLE_BRANCH}" == "master" ]; then
-      ###        chmod +x scripts/packagingDeployment.sh
-      ###        scripts/packagingDeployment.sh
-      ###      fi
-            ### masterの時だけパッケージ作成
+      - run:
+          name: Create Package & Install Sandbox
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+            else
+              chmod +x scripts/packageManagement.sh
+              scripts/packageManagement.sh
+            fi
       - run:
           name: Delete Useless Scratch Org
           command: |
