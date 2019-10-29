@@ -45,7 +45,8 @@ jobs:
       - run:
           name: Create Package & Install Sandbox
           command: |
-            if [[ "${CIRCLE_BRANCH}" == "master" ]]; then
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo "master"
             else
               chmod +x scripts/packageManagement.sh
               scripts/packageManagement.sh
