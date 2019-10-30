@@ -11,4 +11,5 @@ PACKAGE_VERSION="$(echo $PACKAGE_VERSION | jq '.result.SubscriberPackageVersionI
 echo PACKAGE_VERSION | jq
 
 INSTALL_RESULT="$($SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION -w 10 -u $SAND_HUB -r)"
+echo "$SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION -w 10 -u $SAND_HUB -r"
 echo INSTALL_RESULT | jp
