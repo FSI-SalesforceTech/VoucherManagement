@@ -13,6 +13,6 @@ echo $PACKAGE_RESULT | jq
 PACKAGE_VERSION="$(echo $PACKAGE_RESULT | jq '.result.SubscriberPackageVersionId' | tr -d '"')"
 echo $PACKAGE_VERSION | jq
 
-INSTALL_RESULT="$($SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION --publishwait 1 -w 10 -u $SAND_HUB -r)"
-echo "$SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION -w 10 --publishwait 1 -u $SAND_HUB -r"
+INSTALL_RESULT="$($SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION --publishwait 3 -w 10 -u $SAND_HUB -r)"
+echo "$SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION -w 10 --publishwait 3 -u $SAND_HUB -r"
 echo $INSTALL_RESULT | jq
