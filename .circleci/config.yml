@@ -13,6 +13,7 @@ jobs:
     working_directory: ~/ci_app
     environment:
       - DX_CLI_URL: https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+      - PACKAGENAME: "voucherManagement"
     steps:
       - checkout
       - run:
@@ -43,13 +44,29 @@ jobs:
             sfdx force:user:permset:assign -n VoucherManagement -u circle_build_$CIRCLE_BUILD_NUM
 
       - run:
-          name: Create Package & Install Sandbox
+          name: Create Package
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
               echo 'master'
             else
-              chmod +x scripts/packageManagement.sh
-              scripts/packageManagement.sh
+              PACKAGEVERSION="$(sfdx force:package:version:create --package $PACKAGENAME --installationkeybypass --wait 10 --json --targetdevhubusername bunai-crm | jq '.result.SubscriberPackageVersionId' | tr -d '"')"
+              echo 'PackageVersionId - ' ${PACKAGEVERSION}
+              # Store PackageVersionId to be used in future step
+              echo $PACKAGEVERSION > /tmp/packageversion.txt
+              # Wait for package replication
+              echo 'Waiting for 5 minutes for package replication'
+              sleep 5m
+            fi
+      - run:
+          name: Install package in Sandbox
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              echo 'master'
+            else  
+              #Get PackageVersionId
+              PackageVersionId=$(</tmp/packageversion.txt)
+              #Install package in scratch org
+              sfdx force:package:install --package $PackageVersionId --wait 10 --targetusername sandbox
             fi
       - run:
           name: Delete Useless Scratch Org
