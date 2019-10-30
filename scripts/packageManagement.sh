@@ -6,13 +6,13 @@ DEV_HUB="bunai-crm"
 SAND_HUB="sandbox"
 
 ORG_LIST="$($SFDX_CLI_EXEC force:org:list)"
-echo $ORG_LIST | jp
+echo $ORG_LIST | jq
 
 PACKAGE_RESULT="$($SFDX_CLI_EXEC force:package:version:create -p $PACKAGENAME -d force-app -x -w 10 -v $DEV_HUB --json)"
 echo $PACKAGE_RESULT | jq
 PACKAGE_VERSION="$(echo $PACKAGE_RESULT | jq '.result.SubscriberPackageVersionId' | tr -d '"')"
-echo PACKAGE_VERSION | jq
+echo $PACKAGE_VERSION | jq
 
-INSTALL_RESULT="$($SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION --publishwait 10 -w 10 -u $SAND_HUB -r)"
+INSTALL_RESULT="$($SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION --publishwait 1 -w 10 -u $SAND_HUB -r)"
 echo "$SFDX_CLI_EXEC force:package:install --package $PACKAGE_VERSION -w 10 --publishwait 1 -u $SAND_HUB -r"
-echo $INSTALL_RESULT | jp
+echo $INSTALL_RESULT | jq
