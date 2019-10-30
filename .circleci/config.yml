@@ -34,7 +34,7 @@ jobs:
       - run:
           name: Setup Org
           command: |
-            echo 'Running tests'
+            echo 'auth org & push source'
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a bunai-crm
             sfdx force:auth:jwt:grant --clientid $SANDBOX_CONSUMER_KEY --jwtkeyfile assets/server.key --username $SANDBOX_SFDC_USER -a sandbox --instanceurl https://test.salesforce.com
             sfdx force --help
@@ -46,7 +46,7 @@ jobs:
           name: Create Package & Install Sandbox
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              echo "master"
+              echo 'master'
             else
               chmod +x scripts/packageManagement.sh
               scripts/packageManagement.sh
