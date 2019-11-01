@@ -1,0 +1,31 @@
+<template>
+    <lightning-card>
+        <div class="slds-m-around_medium">
+            <h1 class="slds-text-heading_small"><lightning-icon icon-name="custom:custom48"></lightning-icon>&nbsp;認定資格の取得を登録</h1><br>
+            <p class="slds-text-body_regular"><lightning-icon icon-name="utility:info"></lightning-icon>&nbsp;お手数ですが、ユーザが検索されない場合は下記宛先にメールでお知らせください。</p>
+            <p><lightning-formatted-email value="1021006020-ALL-PROPER@fsi.co.jp" ></lightning-formatted-email></p>
+        </div>
+        <lightning-input
+            type="search"
+            onchange={handleKeyChange}
+            class="slds-m-bottom_small"
+            label="メールアドレスでユーザを検索"
+            placeholder="sample@fsi.co.jp"
+            autocomplete
+        ></lightning-input>
+        <template if:true={idle}>
+            <div class="exampleHolder">
+                <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+            </div>
+        </template>
+        <template if:true={options}>
+                <lightning-radio-group name="radioGroup"
+                label="ユーザを選択"
+                options={options}
+                value={value}
+                type="radio"
+            ></lightning-radio-group>
+        </template>
+        
+    </lightning-card>
+</template>

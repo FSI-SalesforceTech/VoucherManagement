@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VoucherManagement</fullName>
+    <active>true</active>
+    <description>最後の手段で{ getPicklistValues } from &#39;lightning/uiObjectInfoApi&#39;を使うために作る</description>
+    <label>バウチャー管理</label>
+    <picklistValues>
+        <picklist>Exam__c</picklist>
+        <values>
+            <fullName>B2C Commerce Technical Solution デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>B2C Commerce デベロッパー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPQ スペシャリスト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Community Cloud コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Architecture and Management デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Development Lifecycle and Deployment デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Einstein Analytics and Discovery コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Field Service Lightning コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Heroku Architecture デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Identity and Access Management デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration Architecture デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Cloud コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Cloud メールスペシャリスト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pardot コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pardot スペシャリスト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform アプリケーションビルダー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platform デベロッパー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Cloud コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Service Cloud コンサルタント</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing and Visibility デザイナー</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>アドミニストレーター</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>アプリケーションアーキテクト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>システムアーキテクト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>テクニカルアーキテクト</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>上級 Platform デベロッパー%EF%BC%881次%EF%BC%89</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>上級アドミニストレーター</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PassOrFail__c</picklist>
+        <values>
+            <fullName>不合格</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>合格</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>
