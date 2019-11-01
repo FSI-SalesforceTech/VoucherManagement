@@ -5,6 +5,9 @@
         "paths": {
             "c/examinationInput": [
                 "examinationInput/examinationInput.js"
+            ],
+            "c/registPassingExamination": [
+                "registPassingExamination/registPassingExamination.js"
             ]
         }
     },
