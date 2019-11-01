@@ -1,23 +1,35 @@
 import { LightningElement, track, wire } from 'lwc';
-import { getPicklistValues } from 'lightning/uiObjectInfoApi';
-import TYPE_FIELD from '@salesforce/schema/ExaminationInfo__c.Exam__c';
+import { createRecord } from 'lightning/uiRecordApi';
+import VOUCHER_OBJECT from '@salesforce/schema/Voucher__c';
+import NAME_FIELD from '@salesforce/schema/Voucher__c.Name';
+import ASSIGNUSER_FIELD from '@salesforce/schema/Voucher__c.AssignUser__c';
+import FINALDECISION_FIELD from '@salesforce/schema/Voucher__c.FinalDecision__c';
 
 import selectChatterUser from '@salesforce/apex/RegistPassingExaminationController.selectChatterUser';
 import getRegistVoucherId from '@salesforce/apex/RegistPassingExaminationController.getRegistVoucherId';
 import getFinalDecisionId from '@salesforce/apex/RegistPassingExaminationController.getFinalDecisionId';
 
 const DELAY = 350;
-const columns = [{ label: '試験名', fieldName: 'name' }];
 
 export default class registPassingExamination extends LightningElement {
     @track idle = false;
-    @track value = '';
+    @track value;
     @track options = [];
-    @track columns = columns;
-    @track recordId;
-
-    @wire(getRegistVoucherId) voucherId;
-    @wire(getFinalDecisionId) finalid;
+    @track examid;
+    @track exam;
+    @track willexam;
+    @track voucherId;
+    @track finalid;
+    @track isSuccess = false;
+    
+    @wire(getFinalDecisionId)
+    wiregetFinalDecisionId({ error, data }) {
+        if(data) {
+            this.finalid = data[0].Id;
+        } else if(error) {
+            alert(error);
+        }
+    }
 
     handleKeyChange(event) {
         this.idle = true;
@@ -33,7 +45,6 @@ export default class registPassingExamination extends LightningElement {
                             this.options.push({label: element.Name, value: element.Id});
                         });
                     }
-                    console.log(result);
                     this.idle = false;
                 })
                 .catch(error => {
@@ -43,7 +54,41 @@ export default class registPassingExamination extends LightningElement {
         }, DELAY);
     }
 
-    handleRowAction(event) {
+    selectUser(event) {
+        getRegistVoucherId({'UserId': event.detail.value})
+            .then( result => {
+                console.log(result);
+                if(result.length > 0) {
+                    this.voucherId = result[0].Id;
+                } else {
+                    const fields = {};
+                    fields[NAME_FIELD.fieldApiName] = '資格保有者登録用';
+                    fields[ASSIGNUSER_FIELD.fieldApiName] = event.detail.value;
+                    fields[FINALDECISION_FIELD.fieldApiName] = this.finalid;
+                    
+                    const recordInput = { apiName: VOUCHER_OBJECT.objectApiName, fields };
+                    console.log(recordInput);
+                    createRecord(recordInput)
+                        .then(Voucher => {
+                            this.voucherId = Voucher.id;
+                        })
+                        .catch(error => {
+                            alert('エラー：' + JSON.stringify(error.body.message));
+                        });
+                }
+            });
+        this.value = event.detail.value;
+    }
 
+    handleSuccess(event) {
+        this.isSuccess = true;
+    }
+
+    closeSuccessToast(){
+        this.isSuccess = false;
+    }
+
+    handleError(error) {
+        alert(error);
     }
 }
