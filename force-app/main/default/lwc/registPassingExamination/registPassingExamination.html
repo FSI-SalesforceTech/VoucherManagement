@@ -1,27 +1,5 @@
 <template>
     <lightning-card>
-        <template if:true={isSuccess}>
-            <div class="demo-only" style="height:4rem">
-                <div class="slds-notify_container slds-is-relative">
-                    <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
-                    <span class="slds-assistive-text">success</span>
-                    <lightning-icon icon-name="action:approval" variant="Success"></lightning-icon>
-                    <div class="slds-notify__content">
-                        <h2 class="slds-text-heading_small ">&nbsp;&nbsp;保存しました！</h2>
-                    </div>
-                    <lightning-button-icon
-                        icon-name="utility:close"
-                        variant="border-inverse"
-                        onclick={closeSuccessToast}
-                        class="slds-button slds-button_icon slds-button_icon-inverse slds-notify__close"
-                        alternative-text="Close window"
-                    ></lightning-button-icon>
-                    <br>
-                    <br>
-                    </div>
-                </div>
-                </div>
-        </template>
         <div class="slds-m-around_medium">
             <h1 class="slds-text-heading_small"><lightning-icon icon-name="custom:custom48"></lightning-icon>&nbsp;認定資格の合格を登録</h1><br>
             <p class="slds-text-body_regular"><lightning-icon icon-name="utility:info"></lightning-icon>&nbsp;お手数ですが、ユーザが検索されない場合は下記宛先にメールでお知らせください。</p>
@@ -62,6 +40,26 @@
                         <lightning-button label="保存" variant="brand" type="submit" icon-name="utility:check"></lightning-button>
                     </center>
                 </lightning-record-edit-form>
+            </div>
+        </template>
+        <template if:true={isSuccess}>
+            <div class="demo-only" style="height:4rem">
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                    <span class="slds-assistive-text">success</span>
+                    <lightning-icon icon-name="action:approval" variant="Success"></lightning-icon>
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small ">&nbsp;&nbsp;保存しました！</h2>
+                    </div>
+                    <lightning-button-icon
+                        icon-name="utility:close"
+                        variant="border-inverse"
+                        onclick={closeSuccessToast}
+                        class="slds-button slds-button_icon slds-button_icon-inverse slds-notify__close"
+                        alternative-text="Close window"
+                    ></lightning-button-icon>
+                    </div>
+                </div>
             </div>
         </template>
     </lightning-card>
