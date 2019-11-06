@@ -20,7 +20,7 @@ const columns = [
     {label : '対象者', fieldName : 'AssignUser__c'},
     {label : '利用期日', fieldName : 'LimitDate__c', type : 'date-local'},
     {label : '試験', fieldName : 'Exam__c'},
-    {label : '予定日', fieldName : 'WillExam__c', type : 'date-local'},
+    {label : '受験日', fieldName : 'WillExam__c', type : 'date-local'},
     {label : '合否', fieldName : 'PassOrFail__c'},
     {type : 'action',
      typeAttributes : { rowActions : actions }
