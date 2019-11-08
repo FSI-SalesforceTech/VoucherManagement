@@ -6,6 +6,9 @@
             "c/examinationInput": [
                 "examinationInput/examinationInput.js"
             ],
+            "c/manageChatterFreeUser": [
+                "manageChatterFreeUser/manageChatterFreeUser.js"
+            ],
             "c/registPassingExamination": [
                 "registPassingExamination/registPassingExamination.js"
             ]

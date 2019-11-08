@@ -1,0 +1,20 @@
+<template>
+    <div>
+        <lightning-card>
+            <template if:false={users}>
+                <div class="exampleHolder">
+                    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                </div>
+            </template>
+            <template if:true={users}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={users.data}
+                    columns={columns}
+                    draft-values={draftValues}
+                    onsave={handleSave}
+                ></lightning-datatable>
+            </template>
+        </lightning-card>
+    </div>
+</template>
