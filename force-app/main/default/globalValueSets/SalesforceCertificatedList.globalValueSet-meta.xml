@@ -130,6 +130,11 @@
         <default>false</default>
         <label>B2C Commerce Technical Solution デザイナー</label>
     </customValue>
+    <customValue>
+        <fullName>Marketing Cloud デベロッパー</fullName>
+        <default>false</default>
+        <label>Marketing Cloud デベロッパー</label>
+    </customValue>
     <masterLabel>Salesforce認定資格</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
