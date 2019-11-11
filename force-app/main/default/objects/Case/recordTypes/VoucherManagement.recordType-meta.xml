@@ -56,6 +56,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Marketing Cloud デベロッパー</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Marketing Cloud メールスペシャリスト</fullName>
             <default>false</default>
         </values>
@@ -128,7 +132,7 @@
         </values>
         <values>
             <fullName>ポータル</fullName>
-            <default>false</default>
+            <default>true</default>
         </values>
     </picklistValues>
     <picklistValues>
