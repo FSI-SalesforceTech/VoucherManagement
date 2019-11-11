@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FinalDecisionNumber__c</fullName>
+    <description>メールテンプレートで使用</description>
+    <externalId>false</externalId>
+    <formula>FinalDecision__r.Name</formula>
+    <label>決裁番号</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>
