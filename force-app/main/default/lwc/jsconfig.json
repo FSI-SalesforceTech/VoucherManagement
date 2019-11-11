@@ -11,6 +11,9 @@
             ],
             "c/registPassingExamination": [
                 "registPassingExamination/registPassingExamination.js"
+            ],
+            "c/applicationForVoucher": [
+                "applicationForVoucher/applicationForVoucher.js"
             ]
         }
     },

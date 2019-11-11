@@ -3,6 +3,15 @@
     <actionOverrides>
         <actionName>View</actionName>
         <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>ApplicationForVoucherFlexiPage</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Case</pageOrSobjectType>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
         <content>FinalDecisionFlexiPage</content>
         <formFactor>Large</formFactor>
         <skipRecordTypeSelect>false</skipRecordTypeSelect>
@@ -34,6 +43,7 @@
     <tabs>Voucher__c</tabs>
     <tabs>ExaminationInfo__c</tabs>
     <tabs>Tab</tabs>
+    <tabs>standard-Case</tabs>
     <tabs>standard-report</tabs>
     <tabs>standard-Dashboard</tabs>
     <uiType>Lightning</uiType>
@@ -50,6 +60,9 @@
         </mappings>
         <mappings>
             <tab>Voucher__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-Case</tab>
         </mappings>
         <mappings>
             <tab>standard-Dashboard</tab>

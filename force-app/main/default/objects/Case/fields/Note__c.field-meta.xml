@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
-    <fullName>FinalDecisionDate__c</fullName>
+    <fullName>Note__c</fullName>
     <externalId>false</externalId>
-    <formula>Voucher__r.FinalDecision__r.Date__c</formula>
-    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
-    <label>決裁日</label>
+    <label>備考</label>
     <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Date</type>
+    <type>TextArea</type>
 </CustomField>

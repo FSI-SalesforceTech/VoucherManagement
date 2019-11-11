@@ -1,0 +1,59 @@
+<template>
+  <div>
+    <template if:true={isSuccess}>
+      <div class="demo-only" style="height:4rem">
+        <div class="slds-notify_container slds-is-relative">
+          <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+            <span class="slds-assistive-text">success</span>
+            <lightning-icon icon-name="action:approval" variant="Success"></lightning-icon>
+            
+            <div class="slds-notify__content">
+              <h2 class="slds-text-heading_small ">&nbsp;&nbsp;申請に成功しました！</h2>
+            </div>
+            <lightning-button-icon icon-name="utility:close" variant="border-inverse" onclick={closeSuccessToast} class="slds-button slds-button_icon slds-button_icon-inverse slds-notify__close" alternative-text="Close window">
+            </lightning-button-icon>
+            <br>
+            <br>
+            </div>
+          </div>
+      </div>
+    </template>
+    <template if:true={isError}>
+      <div class="demo-only" style="height:4rem">
+        <div class="slds-notify_container slds-is-relative">
+          <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+            <span class="slds-assistive-text">error</span>
+            <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Error">
+              <lightning-icon icon-name="utility:warning" variant="error"></lightning-icon>
+            </span>
+              <div class="slds-notify__content">
+                <h2 class="slds-text-heading_small">{errordetail}</h2>
+              </div>
+              <lightning-button-icon icon-name="utility:close" variant="border-inverse" onclick={closeErrorToast} class="slds-button slds-button_icon slds-button_icon-inverse slds-notify__close" alternative-text="close window">
+              </lightning-button-icon>
+          </div>
+        </div>
+      </div>
+    </template>
+    <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess} onerror={handleError}>
+        <lightning-card title="バウチャー利用申請" icon-name="standard:case"></br>
+            <div class="slds-m-bottom_x-small">
+                <p class="slds-text-body_regular">
+                &nbsp;&nbsp;&nbsp;<lightning-icon icon-name="utility:info"></lightning-icon>&nbsp;お手数ですが、ユーザが検索されない場合は下記宛先にメールでお知らせください。</p>&nbsp;
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<lightning-formatted-email value="1021006020-ALL-PROPER@fsi.co.jp" ></lightning-formatted-email></p></br></br>
+                <lightning-input-field field-name='AssignUser__c' required></lightning-input-field>
+                <lightning-input-field field-name='Exam__c' required></lightning-input-field>
+                <lightning-input-field field-name='WillExam__c' required></lightning-input-field>
+                <lightning-input-field field-name='UseOfReferenceProblems__c'></lightning-input-field>
+                <lightning-input-field field-name='Note__c'></lightning-input-field>
+                <lightning-input-field field-name='Subject' disabled value="Salesforceポータルからのバウチャー利用申請"></lightning-input-field>
+                <lightning-input-field field-name='Origin' disabled value="ポータル"></lightning-input-field>
+                <center>
+                <hr>    
+                <lightning-button variant="brand" type="submit" name="save" label="申請" icon-name="utility:check"></lightning-button>
+                </center>
+            </div>
+        </lightning-card>
+    </lightning-record-edit-form>
+  </div>
+</template>
