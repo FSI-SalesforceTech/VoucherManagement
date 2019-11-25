@@ -1,0 +1,18 @@
+[
+    {
+        "sobject": "eqQuestion__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "initdata-eqQuestion__cs.json"
+        ]
+    },
+    {
+        "sobject": "eqAnswer__c",
+        "saveRefs": false,
+        "resolveRefs": true,
+        "files": [
+            "initdata-eqAnswer__cs.json"
+        ]
+    }
+]

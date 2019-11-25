@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CertificationServiceCloud</fullName>
+    <columns>NAME</columns>
+    <columns>Detail__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ExamType__c</field>
+        <operation>equals</operation>
+        <value>Service Cloud コンサルタント</value>
+    </filters>
+    <label>認定ServiceCloudコンサルタント</label>
+</ListView>

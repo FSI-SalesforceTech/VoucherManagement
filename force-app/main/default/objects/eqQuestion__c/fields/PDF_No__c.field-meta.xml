@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PDF_No__c</fullName>
+    <description>過去問内に採番されているNo</description>
+    <externalId>false</externalId>
+    <label>PDF No</label>
+    <precision>5</precision>
+    <required>true</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

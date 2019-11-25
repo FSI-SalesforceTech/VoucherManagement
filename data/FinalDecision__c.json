@@ -1,0 +1,12 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "FinalDecision__c",
+                "referenceId": "FinalDecisionRef1"
+            },
+            "Name": "資格保有者登録用",
+            "Status__c": "完了"
+        }
+    ]
+}

@@ -1,0 +1,175 @@
+<template>
+    <template if:false={isResult}>
+        <template if:false={isUnderTest}>
+            <lightning-card variant="Narrow" title="どの資格で始めますか？" icon-name="custom:custom83">
+                <lightning-combobox name="selectExam"
+                    label="試験名"
+                    value={existExam}
+                    placeholder="試験名を選択してください。"
+                    options={existExam}
+                    onchange={handleChange} 
+                    required
+                ></lightning-combobox>
+                <template if:true={selectedExam}>
+                    <br>
+                    <center>
+                        <lightning-button variant="brand" icon-name="utility:play" onclick={startExamFormat} label="開始"></lightning-button>
+                    </center>
+                </template>
+                <template if:false={selectedExam}>
+                    <br>
+                    <center>
+                        <lightning-button variant="brand" icon-name="utility:play" disabled label="開始"></lightning-button>
+                    </center>
+                </template>
+            </lightning-card>
+        </template>
+        <template if:true={isDrawing}>
+            <div class="exampleHolder">
+                <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+            </div>
+        </template>
+        <template if:false={isDrawing}>
+            <template if:true={isUnderTest}>
+                <lightning-card>
+                    <template if:true={dispExam}>
+                        <center>
+                            <p>{dispExam.exam.ExamType__c}</p>
+                        </center>
+                        <hr>
+                        <p><lightning-formatted-text value={dispExam.exam.Detail__c}></lightning-formatted-text></p>
+                        <br>
+                        <template if:false={isNext}>
+                            <lightning-datatable
+                                key-field="id"
+                                data={dispExam.selection}
+                                onrowselection={handleRowAction}
+                                columns={columns}
+                            ></lightning-datatable>
+                        </template>
+                        <template if:true={isNext}>
+                            <lightning-datatable
+                                key-field="id"
+                                data={wireExam.data}
+                                onrowselection={handleRowAction}
+                                columns={columns}
+                                selected-rows={selectedRows}
+                            ></lightning-datatable>
+                        </template>
+                        <br>
+                        <template if:false={isMark}>
+                            <lightning-layout>
+                                <lightning-layout-item>
+                                    <lightning-button
+                                        label="次へ"
+                                        icon-name="utility:chevronright"
+                                        icon-position="right"
+                                        onclick={handleNext}
+                                    ></lightning-button>
+                                </lightning-layout-item>
+                            </lightning-layout>
+                        </template>
+                        <template if:true={isMark}>
+                            <center>
+                                <lightning-button
+                                    variant="brand"
+                                    label="採点"
+                                    icon-name="utility:touch_action"
+                                    onclick={handleMark}
+                                ></lightning-button>
+                            </center>
+                        </template>
+                        <!--
+                        <lightning-layout>
+                            <lightning-layout-item>
+                                <lightning-button
+                                    label="前へ"
+                                    icon-name="utility:chevronleft"
+                                    onclick={handlePrevious}
+                                ></lightning-button>
+                            </lightning-layout-item>
+                            <lightning-layout-item flexibility="grow"></lightning-layout-item>
+                            <lightning-layout-item>
+                                <lightning-button
+                                    label="次へ"
+                                    icon-name="utility:chevronright"
+                                    icon-position="right"
+                                    onclick={handleNext}
+                                ></lightning-button>
+                            </lightning-layout-item>
+                        </lightning-layout>
+                        -->
+                        <br>
+                        <lightning-progress-bar value={progressnum} size="large"></lightning-progress-bar>
+                        <center>
+                            <p>{dispnum} / {totalnum}</p>
+                        </center>
+                    </template>
+                </lightning-card>
+            </template>
+        </template>
+        
+    </template>
+    <template if:true={isResult}>
+        <br>
+        <center>
+            <p>結果 </p><br>
+            <p>{passedNum} 問正解( {passedPer} % )</p>
+        </center>
+        <br>
+        <table class="slds-table slds-table_resizable-cols slds-table_bordered">
+            <thead align="center">
+                <tr class="slds-line-height_reset">
+                    <th class="slds-size--1-of-5" scope="col">
+                        <div class="slds-truncate" title="Answer">結果</div>
+                    </th>
+                    <th class="slds-is-resizable slds-size--1-of-5" scope="col">
+                        <div class="slds-truncate" title="Detail">設問</div>
+                    </th>
+                    <th class="slds-size--1-of-5" scope="col">
+                        <div class="slds-truncate" title="Your Answer">あなたの解答</div>
+                    </th>
+                    <th class="slds-size--1-of-5" scope="col">
+                        <div class="slds-truncate" title="Answer">正解</div>
+                    </th>
+                </tr>
+            </thead>
+            <template for:each={examdatas} for:item="item">
+                <tr key={item.exam.Id} class="slds-hint-parent">
+                    <th key={item.Id} data-label="Result">
+                        <template if:true={item.isPassed}>
+                            <lightning-icon icon-name="utility:routing_offline" alternative-text="正解"></lightning-icon>
+                        </template>
+                        <template if:false={item.isPassed}>
+                            <lightning-icon icon-name="utility:close" alternative-text="不正解"></lightning-icon>
+                        </template>
+                    </th>
+                    <td data-label="Detail" scope="row">
+                        <div style="width:auto" class="slds-truncate" title="設問">
+                            <p><lightning-formatted-text value={item.exam.Detail__c}></lightning-formatted-text></p>
+                        </div>
+                    </td>
+                    <td key={item.Id} data-label="Your Answer">
+                        <template for:each={item.selected} for:item="is">
+                            <li key={is.Id}>{is.Answer__c}</li>
+                        </template>
+                    </td>
+                    <td key={item.Id} data-label="Answer">
+                        <template for:each={item.answers} for:item="ia">
+                            <li key={ia.Id}>{ia.Answer__c}</li>
+                        </template>
+                    </td>
+                </tr>
+            </template>
+        </table>
+        <br>
+        <center>
+            <lightning-button
+                variant="brand"
+                label="試験を選択"
+                icon-name="utility:home"
+                onclick={gotoTop}
+            ></lightning-button>
+        </center>
+    </template>
+</template>
