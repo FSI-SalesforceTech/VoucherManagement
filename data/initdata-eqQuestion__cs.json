@@ -1,0 +1,40 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef1"
+            },
+            "PDF_No__c": 1,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "Universal Containersのセールス担当者は、アカウント(取引先)、コンタクト(取引先責任者)、オポチュニティ(商談)に関する活動を記録します。\r\n営業マネージャは、担当者や商談の活動など、マネージャが所有するすべてのアカウントのすべての活動を表示するレポートを作成する必要があります。\r\nセールス・マネージャに推奨するレポートを選択してください。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef2"
+            },
+            "PDF_No__c": 9,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "地域管理 (なぜそれを使うのか?) 3つの回答を選択してください。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef3"
+            },
+            "PDF_No__c": 2,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "ユニバーサルコンテナでは、1人の顧客専用のサポートエージェントが、複雑な統合関連のケースを定期的に処理します。\r\nこれらの場合、エージェントはユニバーサルコンテナ製品開発チームおよびクライアントのシステム統合と連携します。\r\nこれらのケースの処理を促進するために、コンサルタントは何を推奨しますか？"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef4"
+            },
+            "PDF_No__c": 13,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "営業担当は、次の場所から見積りを作成できます。"
+        }
+    ]
+}

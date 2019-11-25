@@ -1,0 +1,10 @@
+[
+    {
+        "sobject": "FinalDecision__c",
+        "saveRefs": true,
+        "resolveRefs": false,
+        "files": [
+            "FinalDecision__c.json"
+        ]
+    }
+]
