@@ -39,23 +39,12 @@
                         <hr>
                         <p><lightning-formatted-text value={dispExam.exam.Detail__c}></lightning-formatted-text></p>
                         <br>
-                        <template if:false={isNext}>
-                            <lightning-datatable
-                                key-field="id"
-                                data={dispExam.selection}
-                                onrowselection={handleRowAction}
-                                columns={columns}
-                            ></lightning-datatable>
-                        </template>
-                        <template if:true={isNext}>
-                            <lightning-datatable
-                                key-field="id"
-                                data={wireExam.data}
-                                onrowselection={handleRowAction}
-                                columns={columns}
-                                selected-rows={selectedRows}
-                            ></lightning-datatable>
-                        </template>
+                        <lightning-datatable
+                            key-field="id"
+                            data={dispExam.selection}
+                            onrowselection={handleRowAction}
+                            columns={columns}
+                        ></lightning-datatable>
                         <br>
                         <template if:false={isMark}>
                             <lightning-layout>
