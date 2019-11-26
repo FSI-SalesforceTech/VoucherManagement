@@ -30,9 +30,6 @@ export default class examTestFormat extends LightningElement {
     @track isDrawing = false;
     @track wireExam;
     nextId;
-    @track isNext = false;
-
-    @wire(geteqAnswers, {Id: '$nextId'}) wireExam;
 
     connectedCallback() {
         getExistExam()
@@ -59,7 +56,6 @@ export default class examTestFormat extends LightningElement {
         this.dispnum = 1;
         this.isMark = false;
         this.selectedExam = undefined;
-        this.isNext = false;
 
         this.examtemp.forEach(element => {
                 geteqAnswers({'Id': element.Id})
@@ -87,13 +83,10 @@ export default class examTestFormat extends LightningElement {
             }
             this.progressnum = Math.floor((100 / this.totalnum) * this.dispnum);
             this.dispExam = this.examdatas[this.examnumber];
-            if(this.isNext === false) {
-                this.isNext = true;
-            }
+
             this.isDrawing = false;
             this.nextId = this.dispExam.exam.Id;
             this.selectedRows = [];
-            return refreshApex(this.wireExam);
         } catch(exception) {
 
         }
