@@ -3,6 +3,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getExistExam from '@salesforce/apex/ExamTestFormatController.getExistExam';
 import geteqQuestions from '@salesforce/apex/ExamTestFormatController.geteqQuestions';
 import geteqAnswers from '@salesforce/apex/ExamTestFormatController.geteqAnswers';
+import countExistExam from '@salesforce/apex/ExamTestFormatController.countExistExam';
 import { refreshApex } from '@salesforce/apex';
 
 const columns = [
@@ -30,6 +31,17 @@ export default class examTestFormat extends LightningElement {
     @track isDrawing = false;
     @track wireExam;
     nextId;
+    examslidenumber = 10;
+    
+    existExamCnt;
+
+    @wire(countExistExam, {examname: '$selectedExam'})
+    wirecountExistExam(result) {
+        this.existExamCnt = result;
+        if(result.data) {
+            this.totalnum = result.data.length;
+        }
+    }
 
     connectedCallback() {
         getExistExam()
@@ -44,9 +56,11 @@ export default class examTestFormat extends LightningElement {
 
     handleChange(e) {
         this.selectedExam = e.detail.value;
+        return refreshApex(this.existExamCnt);
     }
 
     async startExamFormat() {
+        console.log(this.examslidenumber);
         this.examtemp = await geteqQuestions({'examname': this.selectedExam});
         this.examdatas = [];
         this.passedNum = 0;
@@ -56,7 +70,12 @@ export default class examTestFormat extends LightningElement {
         this.dispnum = 1;
         this.isMark = false;
         this.selectedExam = undefined;
+        let examtmp = [];
 
+        for( i = 0; i < this.examslidenumber; i++){
+            var j = Math.floor(Math.random() * (i + 1));
+        }
+        
         this.examtemp.forEach(element => {
                 geteqAnswers({'Id': element.Id})
                     .then(result => {
@@ -119,6 +138,10 @@ export default class examTestFormat extends LightningElement {
         });
         this.passedPer = Math.floor(this.passedNum / this.totalnum * 100);
         this.isResult = true;
+    }
+
+    handleSliderChange(event) {
+        this.examslidenumber = event.target.value;
     }
 
     gotoTop() {

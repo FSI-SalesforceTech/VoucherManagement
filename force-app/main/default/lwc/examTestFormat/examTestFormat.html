@@ -13,12 +13,21 @@
                 <template if:true={selectedExam}>
                     <br>
                     <center>
+                        <lightning-slider label="Volume"
+                            value={val}
+                            min=2
+                            max={totalnum}
+                            onchange={handleSliderChange}
+                        ></lightning-slider>
+                        <br>
                         <lightning-button variant="brand" icon-name="utility:play" onclick={startExamFormat} label="開始"></lightning-button>
                     </center>
                 </template>
                 <template if:false={selectedExam}>
                     <br>
                     <center>
+                        <lightning-slider label="Volume" value={val} disabled></lightning-slider>
+                        <br>
                         <lightning-button variant="brand" icon-name="utility:play" disabled label="開始"></lightning-button>
                     </center>
                 </template>
@@ -68,26 +77,6 @@
                                 ></lightning-button>
                             </center>
                         </template>
-                        <!--
-                        <lightning-layout>
-                            <lightning-layout-item>
-                                <lightning-button
-                                    label="前へ"
-                                    icon-name="utility:chevronleft"
-                                    onclick={handlePrevious}
-                                ></lightning-button>
-                            </lightning-layout-item>
-                            <lightning-layout-item flexibility="grow"></lightning-layout-item>
-                            <lightning-layout-item>
-                                <lightning-button
-                                    label="次へ"
-                                    icon-name="utility:chevronright"
-                                    icon-position="right"
-                                    onclick={handleNext}
-                                ></lightning-button>
-                            </lightning-layout-item>
-                        </lightning-layout>
-                        -->
                         <br>
                         <lightning-progress-bar value={progressnum} size="large"></lightning-progress-bar>
                         <center>
