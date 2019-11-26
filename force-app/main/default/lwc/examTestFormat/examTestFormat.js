@@ -74,15 +74,15 @@ export default class examTestFormat extends LightningElement {
 
         for( i = 0; i < this.examslidenumber; i++){
             var j = Math.floor(Math.random() * (i + 1));
+            examtmp.push(this.examtemp[j]);
         }
-        
-        this.examtemp.forEach(element => {
+
+        examtmp.forEach(element => {
                 geteqAnswers({'Id': element.Id})
                     .then(result => {
                         let answer = result.filter(ans => {return ans.isAnswer__c === true});
                         this.examdatas.push({exam: element, selection: result, answers: answer});
-                        this.totalnum = this.examdatas.length;
-                        this.progressnum = Math.floor(100 / this.totalnum);
+                        this.progressnum = Math.floor(100 / this.examslidenumber);
                         this.dispExam = this.examdatas[this.examnumber];
                     });
             });
@@ -97,10 +97,10 @@ export default class examTestFormat extends LightningElement {
             this.examdatas[this.examnumber]['selected'] = this.selectedanswer;
             this.examnumber ++;
             this.dispnum = this.examnumber + 1;
-            if(this.dispnum === this.totalnum) {
+            if(this.dispnum === this.examslidenumber) {
                 this.isMark = true;
             }
-            this.progressnum = Math.floor((100 / this.totalnum) * this.dispnum);
+            this.progressnum = Math.floor((100 / this.examslidenumber) * this.dispnum);
             this.dispExam = this.examdatas[this.examnumber];
 
             this.isDrawing = false;
@@ -136,7 +136,7 @@ export default class examTestFormat extends LightningElement {
                 this.passedNum ++;
             }
         });
-        this.passedPer = Math.floor(this.passedNum / this.totalnum * 100);
+        this.passedPer = Math.floor(this.passedNum / this.examslidenumber * 100);
         this.isResult = true;
     }
 
