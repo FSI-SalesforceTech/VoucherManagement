@@ -13,7 +13,8 @@
                 <template if:true={selectedExam}>
                     <br>
                     <center>
-                        <p><lightning-formatted-text value="何問解きますか？"></lightning-formatted-text></p>
+                        <lightning-helptext icon-name="utility:warning" content="選択した解答のチェックが次の問題に遷移した際に残ってしまう事象が残念ながら解決出来ておりません。お手数ですが、解答前にチェックを全て外してから（左上の「-」を押す）解答して下さい。"></lightning-helptext>
+                        <lightning-formatted-text value="何問解きますか？"></lightning-formatted-text>
                         <br>
                         <lightning-slider label="Volume"
                             value={examslidenumber}
@@ -28,7 +29,8 @@
                 <template if:false={selectedExam}>
                     <br>
                     <center>
-                        <p><lightning-formatted-text value="何問解きますか？"></lightning-formatted-text></p>
+                        <lightning-helptext icon-name="utility:warning" content="選択した解答のチェックが次の問題に遷移した際に残ってしまう事象が残念ながら解決出来ておりません。お手数ですが、解答前にチェックを全て外してから（左上の「-」を押す）解答して下さい。"></lightning-helptext>
+                        <lightning-formatted-text value="何問解きますか？"></lightning-formatted-text>
                         <br>
                         <lightning-slider label="Volume" value={examslidenumber} disabled></lightning-slider>
                         <br>
