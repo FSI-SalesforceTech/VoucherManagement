@@ -55,8 +55,12 @@ export default class examTestFormat extends LightningElement {
     }
 
     handleChange(e) {
-        this.selectedExam = e.detail.value;
-        return refreshApex(this.existExamCnt);
+        try{
+            this.selectedExam = e.detail.value;
+            return refreshApex(this.existExamCnt);
+        }catch(exception) {
+            
+        }
     }
 
     async startExamFormat() {
