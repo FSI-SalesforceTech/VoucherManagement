@@ -13,8 +13,10 @@
                 <template if:true={selectedExam}>
                     <br>
                     <center>
+                        <p><lightning-formatted-text value="何問解きますか？"></lightning-formatted-text></p>
+                        <br>
                         <lightning-slider label="Volume"
-                            value={val}
+                            value={examslidenumber}
                             min=2
                             max={totalnum}
                             onchange={handleSliderChange}
@@ -26,7 +28,9 @@
                 <template if:false={selectedExam}>
                     <br>
                     <center>
-                        <lightning-slider label="Volume" value={val} disabled></lightning-slider>
+                        <p><lightning-formatted-text value="何問解きますか？"></lightning-formatted-text></p>
+                        <br>
+                        <lightning-slider label="Volume" value={examslidenumber} disabled></lightning-slider>
                         <br>
                         <lightning-button variant="brand" icon-name="utility:play" disabled label="開始"></lightning-button>
                     </center>
@@ -80,13 +84,12 @@
                         <br>
                         <lightning-progress-bar value={progressnum} size="large"></lightning-progress-bar>
                         <center>
-                            <p>{dispnum} / {totalnum}</p>
+                            <p>{dispnum} / {examslidenumber}</p>
                         </center>
                     </template>
                 </lightning-card>
             </template>
         </template>
-        
     </template>
     <template if:true={isResult}>
         <br>
@@ -112,7 +115,7 @@
                     </th>
                 </tr>
             </thead>
-            <template for:each={examdatas} for:item="item">
+            <template for:each={examresult} for:item="item">
                 <tr key={item.exam.Id} class="slds-hint-parent">
                     <th key={item.Id} data-label="Result">
                         <template if:true={item.isPassed}>

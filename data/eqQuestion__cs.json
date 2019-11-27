@@ -1,0 +1,274 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef1"
+            },
+            "PDF_No__c": 1,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "管理者はワーフフロールールを設定する際に、何を考慮する必要がありますか\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef2"
+            },
+            "PDF_No__c": 1,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "ある企業では、すべてのメールをファイアウォールで保護する必要があり、200人のエージェントがいます。\n彼らは何を使うべきですか?"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef3"
+            },
+            "PDF_No__c": 1,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "Universal Containersのセールス担当者は、アカウント(取引先)、コンタクト(取引先責任者)、オポチュニティ(商談)に関する活動を記録します。\n営業マネージャは、担当者や商談の活動など、マネージャが所有するすべてのアカウントのすべての活動を表示するレポートを作成する必要があります。\nセールス・マネージャに推奨するレポートを選択してください。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef4"
+            },
+            "PDF_No__c": 2,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "どんな機能が具体的なマーケティングプログラムまたはイニシアチブないのユーザグループキャンペーンを許しますか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef5"
+            },
+            "PDF_No__c": 2,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "ユニバーサルコンテナでは、1人の顧客専用のサポートエージェントが、複雑な統合関連のケースを定期的に処理します。\nこれらの場合、エージェントはユニバーサルコンテナ製品開発チームおよびクライアントのシステム統合と連携します。\nこれらのケースの処理を促進するために、コンサルタントは何を推奨しますか？"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef6"
+            },
+            "PDF_No__c": 2,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "エンドユーザーはOutlookのデータをどのように同期できますか。\n(Salesforce for Outlookの使用)\n該当するものをすべて選択してください"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef7"
+            },
+            "PDF_No__c": 3,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "データインポート時に一部のレコードがデータ検証を満たしていないとどうなりますか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef8"
+            },
+            "PDF_No__c": 3,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "ユニバーサルコンテナは、「Knowledge」と呼ばれるカスタムVisualforceページを構築しました。\nこれは、内部でClassic Knowledgeにアクセスするために使用されます。\nLightning Knowledgeに移行した後、Visualforceページが引き続き機能するようにするには、次の2つの手順を実行する必要がありますか？\n2つの答えを選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef9"
+            },
+            "PDF_No__c": 3,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "セールス担当＠ユニバーサルコンテナは、XYZ社へのオポチュニティ:商談に関してABC社と協力しています。\nABC社がこの案件のパートナー関連リストに追加されました。\n何が自動的に起こりますか?\n2つの回答を選択してください。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef10"
+            },
+            "PDF_No__c": 4,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "取引先オブジェクトの有効な組織全体のデフォルトオプションは何ですか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef11"
+            },
+            "PDF_No__c": 4,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "最後の変更でトリガーされたエスカレーションルールは、ユーザーが次のどのアクションを実行するたびにリセットされますか?"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef12"
+            },
+            "PDF_No__c": 4,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "Force.comを使用すると、カスタムインタフェースを任意のサポートデバイスに組み込むことができます。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef13"
+            },
+            "PDF_No__c": 5,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "7月30日の締め切りに作成された商談レコードは、時間存在ワークフロールールの基準を満たしています\n時間依存行動は7月23日に予定されています\nその商談が7月23日より前に変更され、基準を満たさなくなったらどうなりますか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef14"
+            },
+            "PDF_No__c": 5,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "「自動ケース更新ユーザ」を利用するのは次のうちどれですか。\n3つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef15"
+            },
+            "PDF_No__c": 5,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "標準価格台帳とカスタム価格台帳に関する次の説明のうち、正しいものはどれですか?\n(該当するものをすべて選択してください)"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef16"
+            },
+            "PDF_No__c": 6,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "ユニバーサルコンテナ社のシステム管理者が新しい取引先レコードタイプを作成しました\nただし、新しい取引先レコードを作成するときにセールスユーザはレコードタイプを選択できません\nこれにはどのような理由がありますか\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef17"
+            },
+            "PDF_No__c": 6,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "サポートエンジニアは、ケースの作業中に1つのビューで、\nケースに対するフィールド編集、関連するメール、ケースコメント、関連オブジェクトに対するフィールド編集の完全なリストを時系列で表示する必要があります。\nどのように要件を満たすべきか?"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef18"
+            },
+            "PDF_No__c": 6,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "見積全体に値引を適用できます。\n見積の個々の明細品目に値引を適用する必要はありません。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef19"
+            },
+            "PDF_No__c": 7,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "ユニバーサルコンテナ社の販売担当VPは、新たな商談のステージとして「口頭契約」を追加するように求めました\n管理者は、この新しい選択リストの値を追加しました\nステージフィールド(フェーズ:StageName)は、新しい値が利用できない事がわかった\nユーザ、管理者は何をすべきですか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef20"
+            },
+            "PDF_No__c": 7,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "ユニバーサルコンテナは、2000万ケースを保管するコンタクトセンターを設計している。\nこのうち500万件は、報告と検索のためにアクセスする必要がある。\n最適なシステム・パフォーマンスを確保するアプローチはどれですか。\n3つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef21"
+            },
+            "PDF_No__c": 7,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "ユニバーサル・ファイナンスには2つの営業部門があります。\n営業部門顧客は個人です。\nインド営業部Bの顧客はビジネスです。\n各部門の営業担当には独自のユーザー・プロファイルがあり、個人アカウントが有効になっています。\n営業部門Bの営業担当は個人アカウントを作成できません。;ビジネス・アカウントのみを作成できる必要があります。\nコンサルタントは、これらの要件を満たすためにどのようなソリューションを推奨すべきですか。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef22"
+            },
+            "PDF_No__c": 8,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "ユーザがログインに問題があります\nユーザのログイン履歴には、ユーザが試行したことが示されます\n複数回ログインして、組織からロックアウトされています\nシステム管理者は、ユーザがSalesforceにログインするのをどのように支援できますか\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef23"
+            },
+            "PDF_No__c": 8,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "コンタクトセンターのマネージャは、ナレッジ内のFAQ記事タイプを作成できるユーザを制限する必要があります。\nこの要件を満たすために、コンサルタントは何を推奨すべきですか。\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef24"
+            },
+            "PDF_No__c": 8,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "「予測カテゴリ」 フィールドについて説明しているのは、次のどれですか?"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef25"
+            },
+            "PDF_No__c": 9,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "商品と価格表についてどのステートメントが真実ですか\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef26"
+            },
+            "PDF_No__c": 9,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "どのようなアプリケーションを使用すると、\nクライアントは、公開web サイト上のアイデアを有効にすることができますか"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef27"
+            },
+            "PDF_No__c": 9,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "地域管理\n(なぜそれを使うのか?)\n3つの回答を選択してください。"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef28"
+            },
+            "PDF_No__c": 10,
+            "ExamType__c": "アドミニストレーター",
+            "Detail__c": "SalesforceCRMコンテンツにコンテンツを追加する方法とはなんですか\n2つの回答を選択"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef29"
+            },
+            "PDF_No__c": 10,
+            "ExamType__c": "Service Cloud コンサルタント",
+            "Detail__c": "以下のオブジェクトでキューを持つことができないものはどれ？"
+        },
+        {
+            "attributes": {
+                "type": "eqQuestion__c",
+                "referenceId": "eqQuestion__cRef30"
+            },
+            "PDF_No__c": 10,
+            "ExamType__c": "Sales Cloud コンサルタント",
+            "Detail__c": "プロジェクトの計画段階で、要件が正しく収集されるようにするには、どのような顧客情報が必要ですか?\n3つの回答を選択してください。"
+        }
+    ]
+}

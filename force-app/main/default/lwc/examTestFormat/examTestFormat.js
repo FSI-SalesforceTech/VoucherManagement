@@ -32,7 +32,7 @@ export default class examTestFormat extends LightningElement {
     @track wireExam;
     nextId;
     examslidenumber = 10;
-    
+    @track examresult = [];
     existExamCnt;
 
     @wire(countExistExam, {examname: '$selectedExam'})
@@ -60,7 +60,6 @@ export default class examTestFormat extends LightningElement {
     }
 
     async startExamFormat() {
-        console.log(this.examslidenumber);
         this.examtemp = await geteqQuestions({'examname': this.selectedExam});
         this.examdatas = [];
         this.passedNum = 0;
@@ -70,24 +69,27 @@ export default class examTestFormat extends LightningElement {
         this.dispnum = 1;
         this.isMark = false;
         this.selectedExam = undefined;
-        let examtmp = [];
-
-        for( i = 0; i < this.examslidenumber; i++){
-            var j = Math.floor(Math.random() * (i + 1));
-            examtmp.push(this.examtemp[j]);
+        this.examresult = [];
+        
+        const shuffle = ([...array]) => {
+            for (let i = array.length - 1; i >= 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
         }
+        let temp = shuffle(this.examtemp);
 
-        examtmp.forEach(element => {
+        temp.forEach(element => {
                 geteqAnswers({'Id': element.Id})
                     .then(result => {
                         let answer = result.filter(ans => {return ans.isAnswer__c === true});
-                        this.examdatas.push({exam: element, selection: result, answers: answer});
+                        this.examdatas.push({exam: element, selection: shuffle(result), answers: answer});
                         this.progressnum = Math.floor(100 / this.examslidenumber);
                         this.dispExam = this.examdatas[this.examnumber];
                     });
+                this.isUnderTest = true;
             });
-        
-        this.isUnderTest = true;
     }
 
     handleNext() {
@@ -97,7 +99,7 @@ export default class examTestFormat extends LightningElement {
             this.examdatas[this.examnumber]['selected'] = this.selectedanswer;
             this.examnumber ++;
             this.dispnum = this.examnumber + 1;
-            if(this.dispnum === this.examslidenumber) {
+            if(this.dispnum == this.examslidenumber) {
                 this.isMark = true;
             }
             this.progressnum = Math.floor((100 / this.examslidenumber) * this.dispnum);
@@ -125,19 +127,23 @@ export default class examTestFormat extends LightningElement {
     handleMark() {
         this.examdatas[this.examnumber]['selected'] = this.selectedanswer;        
         this.examdatas.forEach(element => {
-            let isPassed = false;
-            if(element.answers.length === element.selected.length) {
-                isPassed = element.selected.every(item => {
-                    return item.isAnswer__c === true;
-                });
-            }
-            element['isPassed'] = isPassed;
-            if(isPassed === true){
-                this.passedNum ++;
+            if(element.selected !== undefined){
+                let isPassed = false;
+                if(element.answers.length === element.selected.length) {
+                    isPassed = element.selected.every(item => {
+                        return item.isAnswer__c === true;
+                    });
+                }
+                element['isPassed'] = isPassed;
+                if(isPassed === true){
+                    this.passedNum ++;
+                }
+                this.examresult.push(element);
             }
         });
-        this.passedPer = Math.floor(this.passedNum / this.examslidenumber * 100);
+        this.passedPer = Math.floor(this.passedNum / this.dispnum * 100);
         this.isResult = true;
+        console.log('this.isResult: ' + this.isResult);
     }
 
     handleSliderChange(event) {
