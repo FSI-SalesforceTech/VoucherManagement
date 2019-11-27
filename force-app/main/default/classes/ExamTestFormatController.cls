@@ -13,4 +13,9 @@ public with sharing class ExamTestFormatController {
     public static List<Object> geteqAnswers(String Id) {
         return [SELECT Id, Answer__c, isAnswer__c, eqQuestion__c FROM eqAnswer__c WHERE eqQuestion__c = :Id];
     }
+
+    @AuraEnabled(cacheable=true)
+    public static List<Object> countExistExam(String examname) {
+        return [SELECT Id FROM eqQuestion__c WHERE ExamType__c = :examname];
+    }
 }

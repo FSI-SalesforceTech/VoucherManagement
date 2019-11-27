@@ -4,7 +4,7 @@
         "saveRefs": true,
         "resolveRefs": false,
         "files": [
-            "initdata-eqQuestion__cs.json"
+            "eqQuestion__cs.json"
         ]
     },
     {
@@ -12,7 +12,7 @@
         "saveRefs": false,
         "resolveRefs": true,
         "files": [
-            "initdata-eqAnswer__cs.json"
+            "eqAnswer__cs.json"
         ]
     }
 ]

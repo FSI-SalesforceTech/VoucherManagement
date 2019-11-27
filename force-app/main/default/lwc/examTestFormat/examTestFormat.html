@@ -13,12 +13,27 @@
                 <template if:true={selectedExam}>
                     <br>
                     <center>
+                        <lightning-helptext icon-name="utility:warning" content="選択した解答のチェックが次の問題に遷移した際に残ってしまう事象が残念ながら解決出来ておりません。お手数ですが、解答前にチェックを全て外してから（左上の「-」を押す）解答して下さい。"></lightning-helptext>
+                        <lightning-formatted-text value="何問解きますか？"></lightning-formatted-text>
+                        <br>
+                        <lightning-slider label="Volume"
+                            value={examslidenumber}
+                            min=2
+                            max={totalnum}
+                            onchange={handleSliderChange}
+                        ></lightning-slider>
+                        <br>
                         <lightning-button variant="brand" icon-name="utility:play" onclick={startExamFormat} label="開始"></lightning-button>
                     </center>
                 </template>
                 <template if:false={selectedExam}>
                     <br>
                     <center>
+                        <lightning-helptext icon-name="utility:warning" content="選択した解答のチェックが次の問題に遷移した際に残ってしまう事象が残念ながら解決出来ておりません。お手数ですが、解答前にチェックを全て外してから（左上の「-」を押す）解答して下さい。"></lightning-helptext>
+                        <lightning-formatted-text value="何問解きますか？"></lightning-formatted-text>
+                        <br>
+                        <lightning-slider label="Volume" value={examslidenumber} disabled></lightning-slider>
+                        <br>
                         <lightning-button variant="brand" icon-name="utility:play" disabled label="開始"></lightning-button>
                     </center>
                 </template>
@@ -68,36 +83,15 @@
                                 ></lightning-button>
                             </center>
                         </template>
-                        <!--
-                        <lightning-layout>
-                            <lightning-layout-item>
-                                <lightning-button
-                                    label="前へ"
-                                    icon-name="utility:chevronleft"
-                                    onclick={handlePrevious}
-                                ></lightning-button>
-                            </lightning-layout-item>
-                            <lightning-layout-item flexibility="grow"></lightning-layout-item>
-                            <lightning-layout-item>
-                                <lightning-button
-                                    label="次へ"
-                                    icon-name="utility:chevronright"
-                                    icon-position="right"
-                                    onclick={handleNext}
-                                ></lightning-button>
-                            </lightning-layout-item>
-                        </lightning-layout>
-                        -->
                         <br>
                         <lightning-progress-bar value={progressnum} size="large"></lightning-progress-bar>
                         <center>
-                            <p>{dispnum} / {totalnum}</p>
+                            <p>{dispnum} / {examslidenumber}</p>
                         </center>
                     </template>
                 </lightning-card>
             </template>
         </template>
-        
     </template>
     <template if:true={isResult}>
         <br>
@@ -123,7 +117,7 @@
                     </th>
                 </tr>
             </thead>
-            <template for:each={examdatas} for:item="item">
+            <template for:each={examresult} for:item="item">
                 <tr key={item.exam.Id} class="slds-hint-parent">
                     <th key={item.Id} data-label="Result">
                         <template if:true={item.isPassed}>

@@ -3,6 +3,7 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import getExistExam from '@salesforce/apex/ExamTestFormatController.getExistExam';
 import geteqQuestions from '@salesforce/apex/ExamTestFormatController.geteqQuestions';
 import geteqAnswers from '@salesforce/apex/ExamTestFormatController.geteqAnswers';
+import countExistExam from '@salesforce/apex/ExamTestFormatController.countExistExam';
 import { refreshApex } from '@salesforce/apex';
 
 const columns = [
@@ -30,6 +31,17 @@ export default class examTestFormat extends LightningElement {
     @track isDrawing = false;
     @track wireExam;
     nextId;
+    examslidenumber = 10;
+    @track examresult = [];
+    existExamCnt;
+
+    @wire(countExistExam, {examname: '$selectedExam'})
+    wirecountExistExam(result) {
+        this.existExamCnt = result;
+        if(result.data) {
+            this.totalnum = result.data.length;
+        }
+    }
 
     connectedCallback() {
         getExistExam()
@@ -44,6 +56,7 @@ export default class examTestFormat extends LightningElement {
 
     handleChange(e) {
         this.selectedExam = e.detail.value;
+        return refreshApex(this.existExamCnt);
     }
 
     async startExamFormat() {
@@ -56,19 +69,27 @@ export default class examTestFormat extends LightningElement {
         this.dispnum = 1;
         this.isMark = false;
         this.selectedExam = undefined;
+        this.examresult = [];
+        
+        const shuffle = ([...array]) => {
+            for (let i = array.length - 1; i >= 0; i--) {
+              const j = Math.floor(Math.random() * (i + 1));
+              [array[i], array[j]] = [array[j], array[i]];
+            }
+            return array;
+        }
+        let temp = shuffle(this.examtemp);
 
-        this.examtemp.forEach(element => {
+        temp.forEach(element => {
                 geteqAnswers({'Id': element.Id})
                     .then(result => {
                         let answer = result.filter(ans => {return ans.isAnswer__c === true});
-                        this.examdatas.push({exam: element, selection: result, answers: answer});
-                        this.totalnum = this.examdatas.length;
-                        this.progressnum = Math.floor(100 / this.totalnum);
+                        this.examdatas.push({exam: element, selection: shuffle(result), answers: answer});
+                        this.progressnum = Math.floor(100 / this.examslidenumber);
                         this.dispExam = this.examdatas[this.examnumber];
                     });
+                this.isUnderTest = true;
             });
-        
-        this.isUnderTest = true;
     }
 
     handleNext() {
@@ -78,10 +99,10 @@ export default class examTestFormat extends LightningElement {
             this.examdatas[this.examnumber]['selected'] = this.selectedanswer;
             this.examnumber ++;
             this.dispnum = this.examnumber + 1;
-            if(this.dispnum === this.totalnum) {
+            if(this.dispnum == this.examslidenumber) {
                 this.isMark = true;
             }
-            this.progressnum = Math.floor((100 / this.totalnum) * this.dispnum);
+            this.progressnum = Math.floor((100 / this.examslidenumber) * this.dispnum);
             this.dispExam = this.examdatas[this.examnumber];
 
             this.isDrawing = false;
@@ -106,19 +127,27 @@ export default class examTestFormat extends LightningElement {
     handleMark() {
         this.examdatas[this.examnumber]['selected'] = this.selectedanswer;        
         this.examdatas.forEach(element => {
-            let isPassed = false;
-            if(element.answers.length === element.selected.length) {
-                isPassed = element.selected.every(item => {
-                    return item.isAnswer__c === true;
-                });
-            }
-            element['isPassed'] = isPassed;
-            if(isPassed === true){
-                this.passedNum ++;
+            if(element.selected !== undefined){
+                let isPassed = false;
+                if(element.answers.length === element.selected.length) {
+                    isPassed = element.selected.every(item => {
+                        return item.isAnswer__c === true;
+                    });
+                }
+                element['isPassed'] = isPassed;
+                if(isPassed === true){
+                    this.passedNum ++;
+                }
+                this.examresult.push(element);
             }
         });
-        this.passedPer = Math.floor(this.passedNum / this.totalnum * 100);
+        this.passedPer = Math.floor(this.passedNum / this.dispnum * 100);
         this.isResult = true;
+        console.log('this.isResult: ' + this.isResult);
+    }
+
+    handleSliderChange(event) {
+        this.examslidenumber = event.target.value;
     }
 
     gotoTop() {

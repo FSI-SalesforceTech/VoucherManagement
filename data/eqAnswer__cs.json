@@ -1,0 +1,1066 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef1"
+            },
+            "Answer__c": "レコードの作成または編集時にルールを評価できます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef2"
+            },
+            "Answer__c": "インポートウィザードを使用する前にルールを無効にする必要があります",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef3"
+            },
+            "Answer__c": "既存のレコードは、すべて新しいルールがアクティブになった時に評価されます",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef4"
+            },
+            "Answer__c": "ルールアクションは、即時または特定の日付に実行できます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef1"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef5"
+            },
+            "Answer__c": "A.コミュニティ",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef6"
+            },
+            "Answer__c": "B.メール to ケース",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef7"
+            },
+            "Answer__c": "D.オンデマンド メール to ケース",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef8"
+            },
+            "Answer__c": "C.Web to ケース",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef2"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef9"
+            },
+            "Answer__c": "マネージャが所有するアカウント(取引先)およびコンタクト(取引先責任者)に関する活動レポート",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef10"
+            },
+            "Answer__c": "マネージャが所有するアカウント(取引先)とオポチュニティ(商談)に関するレポートをアクティブ化",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef11"
+            },
+            "Answer__c": "マネージャが所有するアカウント(取引先)とコンタクト(取引先責任者)およびオポチュニティ(商談)に関する活動レポート",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef12"
+            },
+            "Answer__c": "マネージャが所有するアカウント(取引先)に関する活動レポート",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef3"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef13"
+            },
+            "Answer__c": "キャンペーンメンバー",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef14"
+            },
+            "Answer__c": "キャンペーンリスト",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef15"
+            },
+            "Answer__c": "キャンペーンの影響",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef16"
+            },
+            "Answer__c": "キャンペーン階層",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef4"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef17"
+            },
+            "Answer__c": "A.統合に関連するナレッジ記事のリポジトリを構築し、顧客と共有します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef5"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef18"
+            },
+            "Answer__c": "B. Chatter ケースフィードを有効にし、製品開発チームのメンバーをケースチームに追加します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef5"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef19"
+            },
+            "Answer__c": "C.関連する子サポート案件を作成し、その子サポート案件を製品開発チームに割り当てます。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef5"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef20"
+            },
+            "Answer__c": "D.顧客とのプライベート Chatter グループを作成し、主要な個人をグループに招待します。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef5"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef21"
+            },
+            "Answer__c": "「sync system try」アイコンを使用し「sync now」をクリックします。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef6"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef22"
+            },
+            "Answer__c": "同期をバックグラウンドで定期的に実行できるようにする",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef6"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef23"
+            },
+            "Answer__c": "Outlookで同期スケジュールを設定する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef6"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef24"
+            },
+            "Answer__c": "Salesforceで同期スケジュールを設定する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef6"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef25"
+            },
+            "Answer__c": "インポートプロセスがデータ検証基準を無視する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef7"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef26"
+            },
+            "Answer__c": "最初の無効なレコードが見つかった場合、インポート処理が終了されます",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef7"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef27"
+            },
+            "Answer__c": "インポートプロセスは、無効なデータを持つレコードに対してのみ失敗します",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef7"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef28"
+            },
+            "Answer__c": "インポートプロセスでは、無効なレコードをインポートするためのユーザ権限が必要です",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef7"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef29"
+            },
+            "Answer__c": "A. 記事RecordTypeフィールドへの Apexコード参照を削除します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef8"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef30"
+            },
+            "Answer__c": "B. Lightning 設計システムを使用するように Visualforce ページを設定します。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef8"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef31"
+            },
+            "Answer__c": "D. ArticleTypeフィールドへの Apex コード参照を削除します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef8"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef32"
+            },
+            "Answer__c": "C. Visualforce ページの名前を「Lightning ナレッジ」に変更する",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef8"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef33"
+            },
+            "Answer__c": "XYXアカウントにパートナー・レコードを追加",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef9"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef34"
+            },
+            "Answer__c": "ABCアカウントにパートナー・レコードを追加",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef9"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef35"
+            },
+            "Answer__c": "ABC社に販売チームのメンバーシップを付与",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef9"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef36"
+            },
+            "Answer__c": "ABC会社にパートナー向けポータルへのアクセスを許可",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef9"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef37"
+            },
+            "Answer__c": "Private",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef10"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef38"
+            },
+            "Answer__c": "Public Read/Write/Transfer",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef10"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef39"
+            },
+            "Answer__c": "No.Access",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef10"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef40"
+            },
+            "Answer__c": "Public Read/Write/Delete",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef10"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef41"
+            },
+            "Answer__c": "A.ケースを読み取ります。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef11"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef42"
+            },
+            "Answer__c": "B.ケースに関連するコメントを追加します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef11"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef43"
+            },
+            "Answer__c": "C.活動を追加する、またはサポート案件レコードから電子メールを送信する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef11"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef44"
+            },
+            "Answer__c": "D.ケースの編集",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef11"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef45"
+            },
+            "Answer__c": "E. 上記のすべて",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef11"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef46"
+            },
+            "Answer__c": "TRUE",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef12"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef47"
+            },
+            "Answer__c": "FALSE",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef12"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef48"
+            },
+            "Answer__c": "時間依存のアクションは自動的にキューから削除されます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef13"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef49"
+            },
+            "Answer__c": "時間依存のアクションは保留になります",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef13"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef50"
+            },
+            "Answer__c": "時間依存行動は7月30日に実行されます",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef13"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef51"
+            },
+            "Answer__c": "時間依存行動は7月23日に実行される",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef13"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef52"
+            },
+            "Answer__c": "A.割り当てルールを使用してケースが自動的に割り当てられる場合、このユーザはケース履歴に一覧表示されます。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef14"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef53"
+            },
+            "Answer__c": "B.ワークフローによって電子メール通知がトリガされると、このユーザはケース履歴に一覧表示されます。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef14"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef54"
+            },
+            "Answer__c": "E.メール-to-ケースでケースが作成された場合、このユーザはケース所有者として割り当てられます。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef14"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef55"
+            },
+            "Answer__c": "D. ケースが Web からケースに作成された場合、このユーザはケース履歴にリストされます。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef14"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef56"
+            },
+            "Answer__c": "C.ケースがエスカレートされるときこのユーザはケース履歴にリストされます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef14"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef57"
+            },
+            "Answer__c": "カスタム価格台帳は、関連するカスタム価格とともに、すべての製品のマスター・リストが含まれます。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef15"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef58"
+            },
+            "Answer__c": "標準価格台帳は、関連する標準価格とともに、すべての製品のマスター・リストが含まれます。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef15"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef59"
+            },
+            "Answer__c": "カスタム価格台帳は、標準価格台帳にリストされている製品のサブセットです。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef15"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef60"
+            },
+            "Answer__c": "レコードタイプが割り当てられたページレイアウトがありません",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef16"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef61"
+            },
+            "Answer__c": "レコードタイプが販売ユーザプロファイルに追加されいません",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef16"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef62"
+            },
+            "Answer__c": "レコードタイプがデフォルトのレコードタイプとして設定されていません",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef16"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef63"
+            },
+            "Answer__c": "レコードタイプがアクティブ化されていません",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef16"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef64"
+            },
+            "Answer__c": "C. [ケース] タブでカスタムビューを作成する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef17"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef65"
+            },
+            "Answer__c": "B.ケースのカスタム関連リストを作成する",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef17"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef66"
+            },
+            "Answer__c": "A.カスタムレポートを作成する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef17"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef67"
+            },
+            "Answer__c": "D.カスタム Visualforce ページを作成する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef17"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef68"
+            },
+            "Answer__c": "TRUE",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef18"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef69"
+            },
+            "Answer__c": "FALSE",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef18"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef70"
+            },
+            "Answer__c": "10段階の値の制限が超えていないことを確認する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef19"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef71"
+            },
+            "Answer__c": "新しい値がアクティブとしてマークされている事を確認する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef19"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef72"
+            },
+            "Answer__c": "適切なレコードタイプに新しい値を追加する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef19"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef73"
+            },
+            "Answer__c": "新しい値を適切なセールスプロセスに追加する",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef19"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef74"
+            },
+            "Answer__c": "B.階層型データ戦略",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef20"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef75"
+            },
+            "Answer__c": "A.カスタムインデックス",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef20"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef76"
+            },
+            "Answer__c": "D.ディビジョン",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef20"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef77"
+            },
+            "Answer__c": "C.レコードタイプ",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef20"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef78"
+            },
+            "Answer__c": "E.カスタム検索",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef20"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef79"
+            },
+            "Answer__c": "部門B営業担当ユーザー・プロファイルから個人アカウント・レコード・タイプを削除します。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef21"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef80"
+            },
+            "Answer__c": "「部門」 を使用して、部門Bの営業担当ユーザー・プロファイルから個人アカウントを非表示にします。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef21"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef81"
+            },
+            "Answer__c": "部門Bの営業担当「- 」ユーザー・プロファイルから「個人アカウント」チェックボックスを非表示にするには、フィールド・レベルのセキュリティを使用します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef21"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef82"
+            },
+            "Answer__c": "部門Bの営業担当ユーザー・プロファイルの「個人アカウントの無効化」権限を確認します。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef21"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef83"
+            },
+            "Answer__c": "ユーザレコードの詳細ページでパスワードリセットをクリックします",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef22"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef84"
+            },
+            "Answer__c": "ユーザのパスワードを含むメールをユーザに送信する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef22"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef85"
+            },
+            "Answer__c": "ユーザレコードの詳細ページでアンロックをクリックします",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef22"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef86"
+            },
+            "Answer__c": "ユーザとしてログインし、新しいパスワードを入力してください",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef22"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef87"
+            },
+            "Answer__c": "A. 記事への読み取り専用アクセス権を持つユーザーの記事管理タブを非表示にします。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef23"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef88"
+            },
+            "Answer__c": "C.パブリッシャープロファイルの記事の管理権限を有効にし、ユーザーに割り当てる",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef23"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef89"
+            },
+            "Answer__c": "B.組織全体のデフォルトを非公開に設定し、FAQ 記事タイプの共有ルールを作成する",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef23"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef90"
+            },
+            "Answer__c": "D. FAQ 記事の種類で [アクセスの作成] を含むパブリッシャープロファイルを作成します。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef23"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef91"
+            },
+            "Answer__c": "実際に成約した案件との関係を識別します",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef24"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef92"
+            },
+            "Answer__c": "オポチュニティ(商談)からの収益が実現されるという数値予測。",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef24"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef93"
+            },
+            "Answer__c": "予測で金額が集計される行を決定します。",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef24"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef94"
+            },
+            "Answer__c": "資産を含む価格書籍には、商品を含めることはできません",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef25"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef95"
+            },
+            "Answer__c": "価値なしの製品は標準価格本に自動的に追加される",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef25"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef96"
+            },
+            "Answer__c": "商品の標準価格と定価は、複数の通貨で表示する事ができます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef25"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef97"
+            },
+            "Answer__c": "商品は異なる価格表に異なる定価を持つ事ができます",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef25"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef98"
+            },
+            "Answer__c": "A.パートナーポータル",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef26"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef99"
+            },
+            "Answer__c": "B.セルフサービスポータル",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef26"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef100"
+            },
+            "Answer__c": "C.サイト",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef26"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef101"
+            },
+            "Answer__c": "D.顧客ポータル",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef26"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef102"
+            },
+            "Answer__c": "テリトリへのアカウントの割当",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef27"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef103"
+            },
+            "Answer__c": "アカウント(取引先)およびオポチュニティ(商談)のデータ・アクセス・ルール",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef27"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef104"
+            },
+            "Answer__c": "通貨消込",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef27"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef105"
+            },
+            "Answer__c": "販売手数料",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef27"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef106"
+            },
+            "Answer__c": "オーバーレイ・セールス・チームの調整",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef27"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef107"
+            },
+            "Answer__c": "Attachments:添付ファイル",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef28"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef108"
+            },
+            "Answer__c": "ChatterFiles:チャターファイル",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef28"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef109"
+            },
+            "Answer__c": "Libraries:ライブラリ",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef28"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef110"
+            },
+            "Answer__c": "Documents:ドキュメントファイル",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef28"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef111"
+            },
+            "Answer__c": "A.アカウント",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef29"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef112"
+            },
+            "Answer__c": "B.ケース",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef29"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef113"
+            },
+            "Answer__c": "D.カスタムオブジェクト",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef29"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef114"
+            },
+            "Answer__c": "C.リード",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef29"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef115"
+            },
+            "Answer__c": "会社の財務情報",
+            "isAnswer__c": false,
+            "eqQuestion__c": "@eqQuestion__cRef30"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef116"
+            },
+            "Answer__c": "必要なオブジェクトとフィールドのリスト",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef30"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef117"
+            },
+            "Answer__c": "現行システムからの主要なレポート",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef30"
+        },
+        {
+            "attributes": {
+                "type": "eqAnswer__c",
+                "referenceId": "eqAnswer__cRef118"
+            },
+            "Answer__c": "タイトル付きの組織図",
+            "isAnswer__c": true,
+            "eqQuestion__c": "@eqQuestion__cRef30"
+        }
+    ]
+}
