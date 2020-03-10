@@ -3,6 +3,12 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/applicationForVoucher": [
+                "applicationForVoucher/applicationForVoucher.js"
+            ],
+            "c/examTestFormat": [
+                "examTestFormat/examTestFormat.js"
+            ],
             "c/examinationInput": [
                 "examinationInput/examinationInput.js"
             ],
@@ -11,9 +17,6 @@
             ],
             "c/registPassingExamination": [
                 "registPassingExamination/registPassingExamination.js"
-            ],
-            "c/applicationForVoucher": [
-                "applicationForVoucher/applicationForVoucher.js"
             ]
         }
     },

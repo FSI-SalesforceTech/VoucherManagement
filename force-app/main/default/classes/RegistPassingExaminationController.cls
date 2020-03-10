@@ -1,4 +1,4 @@
-public with sharing class RegistPassingExaminationController {
+public without sharing class RegistPassingExaminationController {
     @AuraEnabled(cacheable=true)
     public static List<Object> selectChatterUser(String param){
         String key = '%' + param + '%';
