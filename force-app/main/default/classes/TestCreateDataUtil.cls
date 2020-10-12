@@ -31,7 +31,7 @@ public with sharing class TestCreateDataUtil {
      *@バウチャーのデータ作成
      *@String id : 決裁レコードid
      */
-    @TestVisible List<Voucher__c> createVoucherRecord(String id){
+    @TestVisible List<Voucher__c> createVoucherRecord(List<FinalDecision__c> FinalDecisionList){
         List<String> VoucherName = new List<String>();
         VoucherName.add('AAA111111');
         VoucherName.add('BBB222222');
@@ -43,7 +43,7 @@ public with sharing class TestCreateDataUtil {
 
         for(Integer i = 0 ; i < VoucherName.size() ; i++){
             Voucher__c Voucher = new Voucher__c(Name = VoucherList.get(i),
-                                                FinalDecision__c = id);
+                                                FinalDecision__c = FinalDecisionList[1].id);
             VoucherList.add(Voucher);
         }
 

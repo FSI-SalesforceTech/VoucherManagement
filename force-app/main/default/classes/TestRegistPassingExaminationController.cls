@@ -16,7 +16,7 @@ public with sharing class TestRegistPassingExaminationController {
         System.runAs(adminUser){
             String recordNameAdmin = '資格保有者登録用';
             List<FinalDecision__c> FinalDecisionList = CreateDataUtil.createFinalDecisionRecord(recordNameAdmin);
-            List<Voucher__c> VoucherList = CreateDataUtil.createVoucherRecord(FinalDecisionList[1].id);
+            List<Voucher__c> VoucherList = CreateDataUtil.createVoucherRecord(FinalDecisionList);
             List<ExaminationInfo__c> ExaminationInfoList = CreateDataUtil.createExaminationInfoRecord(VoucherList , standardUser.Id);
         
             RegistPassingExaminationController.selectChatterUser('test@xxx.com');
