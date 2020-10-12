@@ -33,11 +33,11 @@ public with sharing class TestCreateDataUtil {
      */
     @TestVisible List<Voucher__c> createVoucherRecord(String id){
         List<String> VoucherName = new List<String>();
-        VoucherName.add(AAA111111);
-        VoucherName.add(BBB222222);
-        VoucherName.add(CCC333333);
-        VoucherName.add(DDD444444);
-        VoucherName.add(EEE555555);
+        VoucherName.add('AAA111111');
+        VoucherName.add('BBB222222');
+        VoucherName.add('CCC333333');
+        VoucherName.add('DDD444444');
+        VoucherName.add('EEE555555');
 
         List<Voucher__c> VoucherList = new List<Voucher__c>();
 
@@ -88,6 +88,45 @@ public with sharing class TestCreateDataUtil {
 
     }
 
+    /*
+     * @資格試験問題のデータ作成
+     */ 
+    @TestVisible List<eqQuestion__c> createeqQuestionRecord(){
+        List<Integer> PfdNo = new List<Integer>();
+        PfdNo.add(1);
+        PfdNo.add(2);
+        PfdNo.add(3);
+        PfdNo.add(4);
+        PfdNo.add(5);
+
+        List<String> Detail = new List<String>();
+        Detail.add('aaaaaaaaaaaaa');
+        Detail.add('bbbbbbbbbbbbb');
+        Detail.add('ccccccccccccc');
+        Detail.add('ddddddddddddd');
+        Detail.add('eeeeeeeeeeeee');
+
+        List<eqQuestion__c> eqQuestionList = new List<eqQuestion__c>();
+
+        for(Integer i = 0 ; i < PfdNo.size() ; i++){
+            eqQuestion__c eqQuestion = new eqQuestion__c(PDF_No__c = PfdNo.get(i),
+                                                        Detail__c = Detail.get(i),
+                                                        ExamType__c = 'アドミニストレーター');
+            eqQuestionList.add(eqQuestion);
+        }
+
+        try{
+            System.debug('Attempting to insert positions');
+            insert eqQuestionList;
+            System.debug('Insert complete');
+        }catch(System.DmlException e){
+            System.debug('DML exception:' + e.getDmlMessage(0));
+        }
+
+        List<Voucher__c> neweqQuestionList = [select id, Name from eqQuestion__c];
+        return neweqQuestionList;
+
+    }
 
     /*
      * @テスト用ユーザ作成
