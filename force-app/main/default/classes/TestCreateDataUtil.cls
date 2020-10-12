@@ -1,7 +1,7 @@
 /* @Contents テストデータ作成共通クラス
  * @Author matsuzaki
  * @Since 2020/10/08
- * @LastUpdate 2020/10/09
+ * @LastUpdate 2020/10/12
  */
 public with sharing class TestCreateDataUtil {
 
@@ -37,7 +37,7 @@ public with sharing class TestCreateDataUtil {
         VoucherName.add('BBB222222');
         VoucherName.add('CCC333333');
         VoucherName.add('DDD444444');
-        VoucherName.add('EEE555555');
+        VoucherName.add('資格保有者登録用');
 
         List<Voucher__c> VoucherList = new List<Voucher__c>();
 
@@ -89,7 +89,7 @@ public with sharing class TestCreateDataUtil {
     }
 
     /*
-     * @資格試験問題のデータ作成
+     * @資格試験問題と回答のデータ作成
      */ 
     @TestVisible List<eqQuestion__c> createeqQuestionRecord(){
         List<Integer> PfdNo = new List<Integer>();
@@ -123,7 +123,24 @@ public with sharing class TestCreateDataUtil {
             System.debug('DML exception:' + e.getDmlMessage(0));
         }
 
-        List<Voucher__c> neweqQuestionList = [select id, Name from eqQuestion__c];
+        List<eqQuestion__c> neweqQuestionList = [select id, Name from eqQuestion__c];
+        List<eqAnswer__c> eqAnswerList = new List<eqAnswer__c>();
+
+        for(Integer i = 0 ; i < neweqQuestionList.size() ; i++){
+            eqAnswer__c eqAnswer = new eqAnswer__c(eqQuestion__c = neweqQuestionList[i].get(id),
+                                                    Answer__c = '正解Death!!',
+                                                    isAnswer__c = True);
+            eqAnswerList.add(eqAnswer);
+        }
+
+        try{
+            System.debug('Attempting to insert positions');
+            insert eqAnswerList;
+            System.debug('Insert complete');
+        }catch(System.DmlException e){
+            System.debug('DML exception:' + e.getDmlMessage(0));
+        }
+
         return neweqQuestionList;
 
     }
