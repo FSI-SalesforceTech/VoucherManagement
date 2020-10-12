@@ -5,7 +5,7 @@
             "default": true,
             "package": "voucherManagement",
             "versionName": "ver 1.4",
-            "versionNumber": "1.4.5.NEXT"
+            "versionNumber": "1.4.6.NEXT"
         }
     ],
     "namespace": "",
@@ -24,6 +24,7 @@
         "voucherManagement@1.4.4-1": "04t10000000eaptAAA",
         "voucherManagement@1.4.4-2": "04t10000000eapyAAA",
         "voucherManagement@1.4.4-3": "04t10000000eaq3AAA",
-        "voucherManagement@1.4.5-1": "04t10000000eaq8AAA"
+        "voucherManagement@1.4.5-1": "04t10000000eaq8AAA",
+        "voucherManagement@1.4.6-1": "04t10000000PWoKAAW"
     }
 }
