@@ -34,11 +34,11 @@ public with sharing class TestCreateDataUtil {
     @TestVisible List<Voucher__c> createVoucherRecord(List<FinalDecision__c> FinalDecisionList){
         List<Voucher__c> VoucherList = new List<Voucher__c>();
         
-        Voucher__c v1 = new Voucher__c(Name = 'AAA111111',FinalDecision__c = FinalDecisionList[1].id);
-        Voucher__c v2 = new Voucher__c(Name = 'BBB222222',FinalDecision__c = FinalDecisionList[1].id);
-        Voucher__c v3 = new Voucher__c(Name = 'CCC333333',FinalDecision__c = FinalDecisionList[1].id);
-        Voucher__c v4 = new Voucher__c(Name = 'DDD444444',FinalDecision__c = FinalDecisionList[1].id);
-        Voucher__c v5 = new Voucher__c(Name = '資格保有者登録用',FinalDecision__c = FinalDecisionList[1].id);
+        Voucher__c v1 = new Voucher__c(Name = 'AAA111111',FinalDecision__c = FinalDecisionList[0].id);
+        Voucher__c v2 = new Voucher__c(Name = 'BBB222222',FinalDecision__c = FinalDecisionList[0].id);
+        Voucher__c v3 = new Voucher__c(Name = 'CCC333333',FinalDecision__c = FinalDecisionList[0].id);
+        Voucher__c v4 = new Voucher__c(Name = 'DDD444444',FinalDecision__c = FinalDecisionList[0].id);
+        Voucher__c v5 = new Voucher__c(Name = '資格保有者登録用',FinalDecision__c = FinalDecisionList[0].id);
 
         VoucherList.add(v1);
         VoucherList.add(v2);
