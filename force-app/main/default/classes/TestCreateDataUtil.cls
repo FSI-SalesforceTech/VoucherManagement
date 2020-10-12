@@ -32,20 +32,19 @@ public with sharing class TestCreateDataUtil {
      *@String id : 決裁レコードid
      */
     @TestVisible List<Voucher__c> createVoucherRecord(List<FinalDecision__c> FinalDecisionList){
-        List<String> VoucherName = new List<String>();
-        VoucherName.add('AAA111111');
-        VoucherName.add('BBB222222');
-        VoucherName.add('CCC333333');
-        VoucherName.add('DDD444444');
-        VoucherName.add('資格保有者登録用');
-
         List<Voucher__c> VoucherList = new List<Voucher__c>();
+        
+        Voucher__c v1 = new Voucher__c(Name = 'AAA111111',FinalDecision__c = FinalDecisionList[1].id);
+        Voucher__c v2 = new Voucher__c(Name = 'BBB222222',FinalDecision__c = FinalDecisionList[1].id);
+        Voucher__c v3 = new Voucher__c(Name = 'CCC333333',FinalDecision__c = FinalDecisionList[1].id);
+        Voucher__c v4 = new Voucher__c(Name = 'DDD444444',FinalDecision__c = FinalDecisionList[1].id);
+        Voucher__c v5 = new Voucher__c(Name = '資格保有者登録用',FinalDecision__c = FinalDecisionList[1].id);
 
-        for(Integer i = 0 ; i < VoucherName.size() ; i++){
-            Voucher__c Voucher = new Voucher__c(Name = VoucherList.get(i),
-                                                FinalDecision__c = FinalDecisionList[1].id);
-            VoucherList.add(Voucher);
-        }
+        VoucherList.add(v1);
+        VoucherList.add(v2);
+        VoucherList.add(v3);
+        VoucherList.add(v4);
+        VoucherList.add(v5);
 
         try{
             System.debug('Attempting to insert positions');
