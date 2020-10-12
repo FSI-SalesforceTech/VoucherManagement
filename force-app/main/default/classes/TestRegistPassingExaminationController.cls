@@ -6,18 +6,18 @@
 @isTest
 public with sharing class TestRegistPassingExaminationController {
     @isTest static void TestRegistPassingExaminationController() {
-        TestCreateDataUtil CreateDataUtil = new TestCreateDataUtil();
+        TestCreateVoucherDataUtil CreateVoucherDataUtil = new TestCreateVoucherDataUtil();
 
         //テスト開始
         Test.starttest();
-        User adminUser = CreateDataUtil.createdUser('CreateExamRecordadmin','admin');
-        User standardUser = CreateDataUtil.createdUser('CreateExamRecord', '');
+        User adminUser = CreateVoucherDataUtil.createdUser('CreateExamRecordadmin','admin');
+        User standardUser = CreateVoucherDataUtil.createdUser('CreateExamRecord', '');
         
         System.runAs(adminUser){
             String recordNameAdmin = '資格保有者登録用';
-            List<FinalDecision__c> FinalDecisionList = CreateDataUtil.createFinalDecisionRecord(recordNameAdmin);
-            List<Voucher__c> VoucherList = CreateDataUtil.createVoucherRecord(FinalDecisionList);
-            List<ExaminationInfo__c> ExaminationInfoList = CreateDataUtil.createExaminationInfoRecord(VoucherList , standardUser.Id);
+            List<FinalDecision__c> FinalDecisionList = CreateVoucherDataUtil.createFinalDecisionRecord(recordNameAdmin);
+            List<Voucher__c> VoucherList = CreateVoucherDataUtil.createVoucherRecord(FinalDecisionList);
+            List<ExaminationInfo__c> ExaminationInfoList = CreateVoucherDataUtil.createExaminationInfoRecord(VoucherList , standardUser.Id);
         
             RegistPassingExaminationController.selectChatterUser('test@xxx.com');
             RegistPassingExaminationController.getRegistVoucherId(standardUser.Id);

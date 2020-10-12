@@ -6,14 +6,14 @@
 @isTest
 public with sharing class TestExamTestFormatController {
     @isTest public static void TestExamTestFormatController(){
-        TestCreateDataUtil CreateDataUtil = new TestCreateDataUtil();
+        TestCreateVoucherDataUtil CreateVoucherDataUtil = new TestCreateVoucherDataUtil();
 
         //テスト開始
         Test.starttest();
-        User adminUser = CreateDataUtil.createdUser('TestExamTestFormatController','admin');
+        User adminUser = CreateVoucherDataUtil.createdUser('TestExamTestFormatController','admin');
         
         System.runAs(adminUser){
-            List<eqQuestion__c> eqQuestionList = CreateDataUtil.createeqQuestionRecord();
+            List<eqQuestion__c> eqQuestionList = CreateVoucherDataUtil.createeqQuestionRecord();
 
             ExamTestFormatController.getExistExam();
             ExamTestFormatController.geteqQuestions('アドミニストレーター');

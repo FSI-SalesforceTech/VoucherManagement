@@ -3,7 +3,7 @@
  * @Since 2020/10/08
  * @LastUpdate 2020/10/12
  */
-public with sharing class TestCreateDataUtil {
+public with sharing class TestCreateVoucherDataUtil {
 
     /*
      *@決裁のデータ作成
