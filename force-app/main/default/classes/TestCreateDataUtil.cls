@@ -127,7 +127,7 @@ public with sharing class TestCreateDataUtil {
         List<eqAnswer__c> eqAnswerList = new List<eqAnswer__c>();
 
         for(Integer i = 0 ; i < neweqQuestionList.size() ; i++){
-            eqAnswer__c eqAnswer = new eqAnswer__c(eqQuestion__c = neweqQuestionList[i].get(id),
+            eqAnswer__c eqAnswer = new eqAnswer__c(eqQuestion__c = neweqQuestionList[i].id,
                                                     Answer__c = '正解Death!!',
                                                     isAnswer__c = True);
             eqAnswerList.add(eqAnswer);
