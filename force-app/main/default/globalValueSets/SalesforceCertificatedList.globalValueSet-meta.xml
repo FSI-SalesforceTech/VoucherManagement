@@ -135,6 +135,11 @@
         <default>false</default>
         <label>Marketing Cloud デベロッパー</label>
     </customValue>
+    <customValue>
+        <fullName>Marketing Cloud アドミニストレーター</fullName>
+        <default>false</default>
+        <label>Marketing Cloud アドミニストレーター</label>
+    </customValue>
     <masterLabel>Salesforce認定資格</masterLabel>
     <sorted>false</sorted>
 </GlobalValueSet>
