@@ -37,23 +37,52 @@
     </template>
     <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess} onerror={handleError}>
         <lightning-card title="バウチャー利用申請" icon-name="standard:case"></br>
-            <div class="slds-m-bottom_x-small">
+            <div class="slds-m-bottom_x-small slds-var-p-around_medium">
                 <p class="slds-text-body_regular">
-                &nbsp;&nbsp;&nbsp;<lightning-icon icon-name="utility:info"></lightning-icon>&nbsp;お手数ですが、ユーザが検索されない場合は下記宛先にメールでお知らせください。</p>&nbsp;
-                <p>&nbsp;&nbsp;&nbsp;&nbsp;<lightning-formatted-email value="Salesforce-TechTeam@fsi.co.jp" ></lightning-formatted-email></p></br></br>
-                <lightning-input-field field-name='AssignUser__c' required></lightning-input-field>
-                <lightning-input-field field-name='Exam__c' required></lightning-input-field>
-                <lightning-input-field field-name='WillExam__c' required></lightning-input-field>
-                <lightning-input-field field-name='UseOfReferenceProblems__c'></lightning-input-field>
-                <lightning-input-field field-name='Note__c'></lightning-input-field>
-                <lightning-input-field field-name='Subject' disabled value="Salesforceポータルからのバウチャー利用申請"></lightning-input-field>
-                <lightning-input-field field-name='Origin' disabled value="ポータル"></lightning-input-field>
-                <center>
-                <hr>    
-                <lightning-button variant="brand" type="submit" name="save" label="申請" icon-name="utility:check"></lightning-button>
-                </center>
+                <lightning-icon icon-name="utility:info"></lightning-icon>&nbsp;お手数ですが、ユーザが検索されない場合は下記宛先にメールでお知らせください。</p>
+                <lightning-formatted-email value="Salesforce-TechTeam@fsi.co.jp" ></lightning-formatted-email></p>
+                </br>
+                <lightning-input
+                    type="search"
+                    onchange={handleKeyChange}
+                    class="slds-m-bottom_small"
+                    label="メールアドレスでユーザを検索"
+                    placeholder="sample@fsi.co.jp"
+                    autocomplete
+                ></lightning-input>
+                <template if:true={idle}>
+                    <div class="exampleHolder">
+                        <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                    </div>
+                </template>
+                
+                <template if:true={options}>
+                  <lightning-radio-group name="radioGroup"
+                      label="ユーザを選択"
+                      options={options}
+                      value={value}
+                      type="radio"
+                      onchange={handleRadioClick}
+                      required
+                  ></lightning-radio-group>
+                </template>
+                
+                <template if:true={userId}>
+                    <lightning-input-field field-name='AssignUser__c' disabled value={userId}></lightning-input-field>
+                    <lightning-input-field field-name='Exam__c' required></lightning-input-field>
+                    <lightning-input-field field-name='WillExam__c' required></lightning-input-field>
+                    <lightning-input-field field-name='UseOfReferenceProblems__c'></lightning-input-field>
+                    <lightning-input-field field-name='Note__c'></lightning-input-field>
+                    <lightning-input-field field-name='Subject' disabled value="Salesforceポータルからのバウチャー利用申請"></lightning-input-field>
+                    <lightning-input-field field-name='Origin' disabled value="ポータル"></lightning-input-field>
+                  <div class="slds-align_absolute-center">
+                    <hr>    
+                    <lightning-button variant="brand" type="submit" name="save" label="申請" icon-name="utility:check"></lightning-button>
+                  </div>
+                </template>
             </div>
         </lightning-card>
     </lightning-record-edit-form>
+    
   </div>
 </template>

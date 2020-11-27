@@ -4,8 +4,8 @@
             "path": "force-app",
             "default": true,
             "package": "voucherManagement",
-            "versionName": "ver 1.4",
-            "versionNumber": "1.4.7.NEXT"
+            "versionName": "ver 1.5",
+            "versionNumber": "1.5.1.NEXT"
         }
     ],
     "namespace": "",
@@ -25,6 +25,9 @@
         "voucherManagement@1.4.4-2": "04t10000000eapyAAA",
         "voucherManagement@1.4.4-3": "04t10000000eaq3AAA",
         "voucherManagement@1.4.5-1": "04t10000000eaq8AAA",
-        "voucherManagement@1.4.6-1": "04t10000000PWoKAAW"
+        "voucherManagement@1.4.6-1": "04t10000000PWoKAAW",
+        "voucherManagement@1.5.0-1": "04t10000000PWrEAAW",
+        "voucherManagement@1.5.0-2": "04t10000000PWrJAAW",
+        "voucherManagement@1.5.1-1": "04t10000000PWrOAAW"
     }
 }

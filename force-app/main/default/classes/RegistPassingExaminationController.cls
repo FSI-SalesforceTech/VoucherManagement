@@ -2,7 +2,7 @@ public without sharing class RegistPassingExaminationController {
     @AuraEnabled(cacheable=true)
     public static List<Object> selectChatterUser(String param){
         String key = '%' + param + '%';
-        return [SELECT Id, Name, Email, SmallPhotoUrl FROM User WHERE (Email like :key) AND (IsActive = true) AND (Profile.Name = 'Chatterユーザ' OR Profile.Name = 'salesforceTech室')];
+        return [SELECT Id, Name, Email, SmallPhotoUrl FROM User WHERE (Email like :key) AND (IsActive = true)];
     }
 
     @AuraEnabled(cacheable=true)
