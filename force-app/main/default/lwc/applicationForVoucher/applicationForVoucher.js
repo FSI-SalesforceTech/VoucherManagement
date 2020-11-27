@@ -53,7 +53,7 @@ export default class applicationForVoucher extends LightningElement {
                 })
                 .catch(error => {
                     this.idle = false;
-                    alert(error);
+                    alert(JSON.stringify(error));
                 });
         }, DELAY);
     }
