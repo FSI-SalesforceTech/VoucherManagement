@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>バウチャーの承認依頼再通知(2021/01/28 Chatterの代替)</description>
+    <encodingKey>ISO-2022-JP</encodingKey>
+    <name>バウチャー承認依頼再通知</name>
+    <style>none</style>
+    <subject>【Salesforceポータル】承認依頼再通知</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

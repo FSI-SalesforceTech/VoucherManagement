@@ -35,7 +35,8 @@
         </div>
       </div>
     </template>
-    <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess} onerror={handleError}>
+    <!-- 2020/02/04 DEL -->
+    <!-- <lightning-record-edit-form object-api-name="Case" onsuccess={handleSuccess} onerror={handleError}> -->
         <lightning-card title="バウチャー利用申請" icon-name="standard:case"></br>
             <div class="slds-m-bottom_x-small slds-var-p-around_medium">
                 <p class="slds-text-body_regular">
@@ -68,6 +69,7 @@
                 </template>
                 
                 <template if:true={userId}>
+                  <!-- 2020/02/04 CHG S
                     <lightning-input-field field-name='AssignUser__c' disabled value={userId}></lightning-input-field>
                     <lightning-input-field field-name='Exam__c' required></lightning-input-field>
                     <lightning-input-field field-name='WillExam__c' required></lightning-input-field>
@@ -75,14 +77,24 @@
                     <lightning-input-field field-name='Note__c'></lightning-input-field>
                     <lightning-input-field field-name='Subject' disabled value="Salesforceポータルからのバウチャー利用申請"></lightning-input-field>
                     <lightning-input-field field-name='Origin' disabled value="ポータル"></lightning-input-field>
+                  -->
+                  <lightning-combobox name="Exam" label="試験" value={ExamValue} options={ExamOptions} onchange={handleExamChange}  required></lightning-combobox>
+                  <lightning-input    name="WillExam" label="予定日" type="date" onchange={handleWillExamChange} required></lightning-input>
+                  <lightning-input    name="UseOfReferenceProblems" label="過去問題を利用する" type="checkbox" onchange={handleUseOfReferenceProblemsChange}></lightning-input>
+                  <lightning-input    name="Note" label="備考" type="text" onchange={handleNoteChange} ></lightning-input>
+                  <lightning-input    name="Subject" label="件名" type="text" disabled value="Salesforceポータルからのバウチャー利用申請"></lightning-input>
+                  <lightning-combobox name="Origin" label="発生源" value={OriginValue} options={OriginOptions} disabled></lightning-combobox>
+                  <!-- 2020/02/04 CHG E-->
                   <div class="slds-align_absolute-center">
-                    <hr>    
-                    <lightning-button variant="brand" type="submit" name="save" label="申請" icon-name="utility:check"></lightning-button>
+                    <hr>
+                    <!-- 2020/02/04 CHG -->
+                    <!-- <lightning-button variant="brand" type="submit" name="save" label="申請" icon-name="utility:check"></lightning-button> -->
+                    <lightning-button variant="brand" label="申請"  onclick={createCase} icon-name="utility:check"></lightning-button>
                   </div>
                 </template>
             </div>
         </lightning-card>
-    </lightning-record-edit-form>
-    
+    <!-- 2020/02/04 DEL -->
+    <!-- </lightning-record-edit-form> -->
   </div>
 </template>
