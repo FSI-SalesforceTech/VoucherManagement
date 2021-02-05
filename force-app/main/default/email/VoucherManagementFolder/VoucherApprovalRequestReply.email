@@ -1,0 +1,7 @@
+以下のバウチャー利用申請の対応をお願いいたします。
+
+
+対象者：{!Case.AssignUser__c}
+試験：{!Case.Exam__c}
+予定日：{!Case.WillExam__c}
+レコード：https://fsi-co-jp-bunaicrm.lightning.force.com/lightning/r/Case/{!Case.Id}/view
