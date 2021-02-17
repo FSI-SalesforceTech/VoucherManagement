@@ -76,6 +76,7 @@
                         </header>
                             
                         <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+<!-- 2021/02/16 CHG S
                             <lightning-record-edit-form record-id={examid} object-api-name="ExaminationInfo__c" mode="edit" onsuccess={handleSuccess} onerror={handleError}>
                                 <lightning-input-field field-name="Exam__c"></lightning-input-field>
                                 <lightning-input-field field-name="WillExam__c"></lightning-input-field>
@@ -84,6 +85,15 @@
                                 <lightning-button label="キャンセル" variant="neutral" onclick={closeModal} icon-name="utility:close"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;
                                 <lightning-button label="保存" variant="brand" type="submit" icon-name="utility:check"></lightning-button>
                             </lightning-record-edit-form>
+-->
+                            <lightning-combobox name="Exam"       label="試験"   value={ExamValue}       options={ExamOptions}       onchange={handleExamChange}       required></lightning-combobox>
+                            <lightning-combobox name="PassOrFail" label="合否"   value={PassOrFailValue} options={PassOrFailOptions} onchange={handlePassOrFailChange}         ></lightning-combobox>
+                            <lightning-input    name="WillExam"   label="受験日" value={WillExamValue}   type="date"                 onchange={handleWillExamChange}   required></lightning-input>
+                            </br>
+                            <hr>&nbsp;&nbsp;&nbsp;
+                            <lightning-button label="キャンセル" variant="neutral" onclick={closeModal} icon-name="utility:close"></lightning-button>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <lightning-button label="保存"       variant="brand"   onclick={createExaminationInput} icon-name="utility:check"></lightning-button>
+<!-- 2021/02/16 CHG E -->
                         </div>
                     </div>
                 </section>
